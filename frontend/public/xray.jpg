@@ -1,0 +1,2712 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>The Radiology Assistant : 404</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="https://radiologyassistant.nl/site/themes/radiology-assistant/img/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://radiologyassistant.nl/site/themes/radiology-assistant/img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://radiologyassistant.nl/site/themes/radiology-assistant/img/favicon-16x16.png"/>
+    <link rel="manifest" href="https://radiologyassistant.nl/site/themes/radiology-assistant/assets/manifest.json"/>
+    <link rel="mask-icon" href="https://radiologyassistant.nl/site/themes/radiology-assistant/img/safari-pinned-tab.svg" color="#5bbad5"/>
+    <link rel="shortcut icon" href="https://radiologyassistant.nl/site/themes/radiology-assistant/img/favicon.ico"/>
+    <meta name="msapplication-config" content="https://radiologyassistant.nl/site/themes/radiology-assistant/assets/browserconfig.xml"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen, print" href="https://radiologyassistant.nl/site/themes/radiology-assistant/css/dist.css?v=1679433952"/>
+
+    <link rel="stylesheet" href="https://radiologyassistant.nl/site/themes/radiology-assistant/css/radiology-assistant.css" />
+    <link rel="stylesheet" href="https://radiologyassistant.nl/site/themes/radiology-assistant/css/gdpr.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-948LDY626S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-948LDY626S');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+</head>
+<body class="bg-back">
+
+
+<nav class="flex-wrap px-4 md:px-6 pt-2 fixed w-full z-20 top-0 bg-back">
+
+    <div class="flex md:flex-col lg:flex-row items-center justify-between relative  w-full max-w-5xl mx-auto border-b border-primary">
+        <div class="flex items-center flex-shrink-0 mr-4">
+            <a href="/" id="logo" >
+                <img src="/assets/logo.png" width="250px" height="50px"/>
+            </a>
+        </div>
+
+        <div class="w-full  mx-auto md:w-auto lg:mr-0 hidden md:block pt-6 md:pt-0 text-primary ">
+            <ul class=" md:flex md:flex-wrap  items-center
+                    ">
+                                <li class="main-nav__item">
+                    <a href="/abdomen" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">Abdomen</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/acute-abdomen" class="text-white">Acute Abdomen</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/acute-abdomen/appendicitis-and-mimics" class="">Appendicitis and Mimics</a></li>
+    <li class="hover:underline"><a href="/abdomen/acute-abdomen/appendicitis-us-findings" class="">Appendicitis - US findings</a></li>
+    <li class="hover:underline"><a href="/abdomen/acute-abdomen/appendicitis-pitfalls-in-us-and-ct-diagnosis" class="">Appendicitis - Pitfalls in US and CT diagnosis</a></li>
+    <li class="hover:underline"><a href="/abdomen/acute-abdomen/ct-in-trauma" class="">CT in Abdominal Trauma</a></li>
+    <li class="hover:underline"><a href="/abdomen/acute-abdomen/practical-approach-to-acute-abdomen" class="">Practical approach to Acute Abdomen</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/anal-cancer-2" class="text-white">Anal cancer</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/anal-cancer-2/anal" class="">Anal cancer staging</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/abdomen-1" class="text-white">Abdominal wall</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/abdomen-1/abdominal-wall-hernias" class="">Abdominal wall hernias</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/adrenals" class="text-white">Adrenals</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/adrenals/lesion-characterization" class="">Characterization of Adrenal lesions</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/aorta" class="text-white">Aorta</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/aorta/aneurysm-rupture" class="">Aortic Aneurysm Rupture</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/biliary-system" class="text-white">Biliary system</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/biliary-system/lk-jg" class="">Gallbladder obstruction</a></li>
+    <li class="hover:underline"><a href="/abdomen/biliary-system/biliary-duct-pathology" class="">Biliary duct pathology</a></li>
+    <li class="hover:underline"><a href="/abdomen/biliary-system/gallbladder-wall-thickening" class="">Gallbladder wall thickening</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/bladder" class="text-white">Bladder</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/bladder/bladder-cancer-vi-rads" class="">Bladder Cancer - VI-RADS</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/bowel" class="text-white">Bowel</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/bowel/bowel-ischemia" class="">Bowel Ischemia - Video Lectures</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/bowel-wall-thickening-ct-pattern" class="">CT-pattern of Bowel wall thickening</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/closed-loop-in-small-bowel-obstruction" class="">Closed Loop in Small bowel obstruction</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/closed-loop-obstruction-with-video" class="">Closed Loop Obstruction with video</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/crohn-s-disease" class="">Crohn's disease - role of MRI</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/ultrasound-in-crohns-disease" class="">Crohn's disease - role of Ultrasound</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/small-bowel-tumors" class="">Small Bowel Tumors</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/sharp-foreign-bodies-in-gi-tract" class="">Sharp foreign bodies in GI tract</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/chest-radiology-for-abdominal-radiologists" class="text-white">Chest radiology for Abdominal radiologists</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/chest-radiology-for-abdominal-radiologists/chest-radiology-for-abdominal-radiologists" class="">Thoracic Ultrasound in Acute Abdomen</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/unsorted" class="text-white">Gynaecology</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/unsorted/us-of-acute-gynaecology" class="">Acute Abdomen in Gynaecology - Ultrasound</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/endometriosis-mri-detection" class="">Endometriosis - MRI detection</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/mr-in-cervical-cancer-1" class="">Cervical Cancer - MR staging</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/mr-in-endometrial-cancer" class="">Endometrial Cancer - MR staging</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/mullerian-duct-anomalies" class="">Müllerian duct anomalies</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/common-ovarian-cystic-lesions" class="">Ovarian cystic lesions</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/roadmap-to-evaluate-ovarian-cysts" class="">Roadmap to evaluate ovarian cysts</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/common-ovarian-cystic-lesions-1" class="">Ovarian cystic lesions.</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/kidney" class="text-white">Kidney</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/kidney/bozniak-2019" class="">Bosniak Classification 2019</a></li>
+    <li class="hover:underline"><a href="/abdomen/kidney/solid-masses" class="">Solid Renal Masses</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/liver" class="text-white">Liver</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/liver/characterisation-of-liver-masses" class="">Characterisation of liver masses</a></li>
+    <li class="hover:underline"><a href="/abdomen/liver/common-liver-tumors" class="">Common Liver Tumors</a></li>
+    <li class="hover:underline"><a href="/abdomen/liver/incidentalomas" class="">Incidentalomas in the liver</a></li>
+    <li class="hover:underline"><a href="/abdomen/liver/segmental-anatomy" class="">Liver - Segmental Anatomy</a></li>
+    <li class="hover:underline"><a href="/abdomen/liver/li-rads" class="">LI-RADS</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/ovarium" class="text-white">Ovarium</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/ovarium/roadmap-to-evaluate-ovarian-cysts-1" class="">Roadmap to evaluate ovarian cysts.</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/pancreas" class="text-white">Pancreas</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/pancreas/acute-pancreatitis" class="">Acute Pancreatitis</a></li>
+    <li class="hover:underline"><a href="/abdomen/pancreas/pancreas-carcinoma-1" class="">Pancreatic Cancer - CT staging 2.0</a></li>
+    <li class="hover:underline"><a href="/abdomen/pancreas/pancreas-cystic-lesions" class="">Pancreatic cystic Lesions</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/peritoneum" class="text-white">Peritoneum</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/peritoneum/anatomy-of-peritoneum-and-mesentery" class="">Anatomy of Peritoneum and Mesentery</a></li>
+    <li class="hover:underline"><a href="/abdomen/peritoneum/peritoneal-carcinomatosis" class="">Peritoneal Carcinomatosis</a></li>
+    <li class="hover:underline"><a href="/abdomen/peritoneum/peritoneal-pathology" class="">Peritoneal Pathology</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/prostate" class="text-white">Prostate</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/prostate/prostate-cancer-pi-rads-v2-1" class="">Prostate Cancer - PI-RADS v2.1</a></li>
+    <li class="hover:underline"><a href="/abdomen/prostate/prostate-cancer-pi-rads-v2-1-1" class="">Prostate Anatomy</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/rectum" class="text-white">Rectum</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/rectum/rectal-cancer-mr-staging-1-1" class="">Rectal Cancer  MR staging and restaging- update 2026</a></li>
+    <li class="hover:underline"><a href="/abdomen/rectum/perianal-fistulas" class="">Perianal Fistulas</a></li>
+    <li class="hover:underline"><a href="/abdomen/rectum/dynamic-rectal-examination" class="">Dynamic Rectal examination</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/abdomen/ultrasound" class="text-white">Ultrasound</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/abdomen/ultrasound/transvaginal-ultrasound-for-non-gynaecological-conditions" class="">Transvaginal Ultrasound for Non-Gynaecological Conditions</a></li>
+    <li class="hover:underline"><a href="/abdomen/ultrasound/role-of-ultrasound-in-acute-abdomen" class="">Ultrasound in Acute Abdomen</a></li>
+    <li class="hover:underline"><a href="/abdomen/ultrasound/lk-jg-1-1-1" class="">US of the GI tract - Technique</a></li>
+    <li class="hover:underline"><a href="/abdomen/ultrasound/lk-jg-1-1" class="">US of the GI tract - Normal Anatomy</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                                <li class="main-nav__item">
+                    <a href="/breast" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">Breast</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/breast/bi-rads" class="text-white">BI-RADS</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/breast/bi-rads/bi-rads-for-mammography-and-ultrasound-2013" class="">Bi-RADS for Mammography and Ultrasound 2013</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/breast/calcifications" class="text-white">Calcifications</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/breast/calcifications/differential-of-breast-calcifications" class="">Differential of Breast Calcifications</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/breast/breast-cancer" class="text-white">Breast Cancer</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/breast/breast-cancer/staging-and-treatment-of-breast-cancer" class="">Staging and Treatment of Breast Cancer</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/breast/breast-prosthesis" class="text-white">Breast Prosthesis</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/breast/breast-prosthesis/breast-prosthesis-imaging" class="">Breast Implants</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/breast/male-breast" class="text-white">Male Breast</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/breast/male-breast/pathology-of-the-male-breast" class="">Pathology of the Male Breast</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/breast/mri" class="text-white">MRI</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/breast/mri/mri-of-the-breast" class="">MRI of the Breast</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/breast/ultrasound" class="text-white">Ultrasound</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/breast/ultrasound/ultrasound-of-the-breast" class="">Ultrasound of the Breast</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                                <li class="main-nav__item">
+                    <a href="/cardiovascular" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">Cardiovascular</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/cardiovascular/anatomy" class="text-white">Anatomy</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/cardiovascular/anatomy/cardiac-anatomy" class="">Cardiac Anatomy</a></li>
+    <li class="hover:underline"><a href="/cardiovascular/anatomy/coronary-anatomy-and-anomalies" class="">Coronary anatomy and anomalies</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/cardiovascular/cad-rads" class="text-white">CAD-RADS</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/cardiovascular/cad-rads/coronary-artery-disease-reporting-and-data-system" class="">Coronary Artery Disease-Reporting and Data System 2.0</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/cardiovascular/cardiomyopathy" class="text-white">Cardiomyopathy</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/cardiovascular/cardiomyopathy/ischemic-and-non-ischemic-cardiomyopathy" class="">Ischemic and non-ischemic cardiomyopathy</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/cardiovascular/devices" class="text-white">Devices</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/cardiovascular/devices/cardiovascular-devices" class="">Cardiovascular devices</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/cardiovascular/peripheral-mra" class="text-white">Peripheral MRA</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/cardiovascular/peripheral-mra/contrast-enhanced-mra-of-peripheral-vessels" class="">Contrast-enhanced MRA of peripheral vessels</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/cardiovascular/pearls" class="text-white">Pearls...</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/cardiovascular/pearls/cardiovascular-pearls-on-chest-ct" class="">Cardiovascular Pearls on Chest CT...</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/cardiovascular/thoracic-aorta-1" class="text-white">Pulmonary Hypertension</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/cardiovascular/thoracic-aorta-1/acute-aortic-syndrome-1" class="">Pulmonary Hypertension and Thromboembolic disease</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/cardiovascular/thoracic-aorta" class="text-white">Thoracic Aorta</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/cardiovascular/thoracic-aorta/acute-aortic-syndrome" class="">Acute Aortic Syndrome</a></li>
+    <li class="hover:underline"><a href="/cardiovascular/thoracic-aorta/vascular-anomalies-of-aorta-pulmonary-and-systemic-vessels" class="">Vascular Anomalies of Aorta, Pulmonary and Systemic vessels</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                                <li class="main-nav__item">
+                    <a href="/chest" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">Chest</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/airways" class="text-white">Airways</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/airways/large-airway-disease" class="">Large airway disease</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/chest-x-ray" class="text-white">Chest X-Ray</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/chest-x-ray/basic-interpretation" class="">Chest X-Ray - Basic Interpretation</a></li>
+    <li class="hover:underline"><a href="/chest/chest-x-ray/heart-failure" class="">Chest X-Ray - Heart Failure</a></li>
+    <li class="hover:underline"><a href="/chest/chest-x-ray/lung-disease" class="">Chest X-Ray - Lung disease</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/covid-19" class="text-white">COVID-19</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/covid-19/covid19-imaging-findings" class="">COVID-19 Imaging findings</a></li>
+    <li class="hover:underline"><a href="/chest/covid-19/covid-19-differential-diagnosis" class="">COVID-19  Differential Diagnosis</a></li>
+    <li class="hover:underline"><a href="/chest/covid-19/corads-classification" class="">COVID-19  CO-RADS classification</a></li>
+    <li class="hover:underline"><a href="/chest/covid-19/ct-findings-in-patients" class="">32 cases of suspected COVID-19</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/cystic-lung-disease" class="text-white">Cystic Lung Disease</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/cystic-lung-disease/analysis-of-cystic-lung-disease-1-1-1" class="">Cystic Lung Disease - Differential diagnosis</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/esophagus" class="text-white">Esophagus</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/esophagus/esophagus-i-anatomy-rings-inflammation" class="">Esophagus I: anatomy, rings, inflammation</a></li>
+    <li class="hover:underline"><a href="/chest/esophagus/esophagus-ii-strictures-acute-syndromes-neoplasms-and-vascular-impressions" class="">Esophagus II: Strictures, Acute syndromes, Neoplasms and Vascular impressions</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/hrct" class="text-white">HRCT</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/hrct/basic-interpretation" class="">HRCT - Basic Interpretation</a></li>
+    <li class="hover:underline"><a href="/chest/hrct/common-diseases" class="">HRCT - Common diagnoses</a></li>
+    <li class="hover:underline"><a href="/chest/hrct/fibrosis-of-the-lung-on-hrct-imaging" class="">HRCT – Patterns of pulmonary fibrosis in ILD</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/lung-anatomy" class="text-white">Lung anatomy</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/lung-anatomy/lung-segments" class="">Lung Segments and Bronchi</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/lung-cancer" class="text-white">Lung Cancer</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/lung-cancer/tnm-classification-8th-edition-1" class="">TNM classification 9ᵗʰ edition</a></li>
+    <li class="hover:underline"><a href="/chest/lung-cancer/cystic-lung-cancer" class="">Cystic Lung Cancer</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/mediastinum" class="text-white">Mediastinum</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/mediastinum/mediastinum-lymph-node-map" class="">Mediastinal Lymph Node Map</a></li>
+    <li class="hover:underline"><a href="/chest/mediastinum/masses-differential-diagnosis" class="">Mediastinal Masses - differential diagnosis</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/pearls" class="text-white">Pearls</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/pearls/cardiovascular-pearls-on-chest-ct-2" class="">Cardiovascular Pearls on Chest CT.</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/plumonary-nodules" class="text-white">Pulmonary nodules</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/plumonary-nodules/bts-guideline" class="">BTS guideline of pulmonary nodules</a></li>
+    <li class="hover:underline"><a href="/chest/plumonary-nodules/fleischner-2017-guideline" class="">Fleischner 2017 guideline</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/solitary-pulmonary-nodule" class="text-white">Solitary Pulmonary Nodule</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/solitary-pulmonary-nodule/benign-versus-malignant" class="">Pulmonary nodule - Benign versus Malignant</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/tb" class="text-white">Tuberculosis</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/tb/tuberculosis" class="">Imaging findings in TB</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/chest/thymus" class="text-white">Thymus</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/chest/thymus/thymus" class="">Thymic masses and mimics</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                                <li class="main-nav__item">
+                    <a href="/head-neck" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">Head/Neck</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/cervical-node-mapping" class="text-white">Cervical Nodes</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/cervical-node-mapping/cervical-node-map" class="">Cervical Lymph Node Map</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/esophagus-1" class="text-white">Esophagus</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/esophagus-1/esophagus-i-anatomy-rings-inflammation-1" class="">Esophagus I: anatomy, rings, inflammation</a></li>
+    <li class="hover:underline"><a href="/head-neck/esophagus-1/esophagus-ii-strictures-acute-syndromes-neoplasms-and-vascular-impressions-1" class="">Esophagus II: Strictures, Acute syndromes, Neoplasms and Vascular impressions.</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/infrahyoid-neck" class="text-white">Infra- and suprahyoid neck</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/infrahyoid-neck/anatomy-and-pathology" class="">Anatomy and Pathology of the Infrahyoid Neck</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/neck-masses" class="text-white">Tumors</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/neck-masses/neck-masses-in-children" class="">Neck Masses in Children</a></li>
+    <li class="hover:underline"><a href="/head-neck/neck-masses/head-neck-tumors" class="">Head Neck tumors - When to think of malignancy</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/orbita" class="text-white">Orbita</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/orbita/pathology" class="">CT and MRI of the Eye</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/paranasal-sinuses" class="text-white">Paranasal Sinuses</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/paranasal-sinuses/mri-examination" class="">MRI of the Paranasal Sinuses</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/swallowing" class="text-white">Swallowing</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/swallowing/swallowing-disorders-update" class="">Swallowing disorders update</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/temporal-bone" class="text-white">Temporal Bone</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/temporal-bone/anatomy" class="">Temporal Bone Anatomy 1.0</a></li>
+    <li class="hover:underline"><a href="/head-neck/temporal-bone/anatomy-2-0" class="">Temporal Bone Anatomy 2.0</a></li>
+    <li class="hover:underline"><a href="/head-neck/temporal-bone/pathology" class="">Temporal Bone Pathology</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/tinnitus" class="text-white">Tinnitus</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/tinnitus/pulsatile-and-non-pulsatile-tinnitus" class="">Pulsatile and non-pulsatile tinnitus</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/ti-rads" class="text-white">TI-RADS</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/ti-rads/ti-rads" class="">TI-RADS - Thyroid Imaging Reporting and Data System</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/head-neck/trigeminus" class="text-white">Trigeminus</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/head-neck/trigeminus/trigeminal-neuralgia-and-neuropathy" class=""> Trigeminal neuralgia</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                                <li class="main-nav__item">
+                    <a href="/musculoskeletal" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">Musculoskeletal</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/ankle" class="text-white">Ankle</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/ankle/fracture-mechanism-and-radiography" class="">Ankle Fracture Mechanism and Radiography</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/ankle/fractures-video-lesson-1" class="">Algoritm for Ankle Fractures 2.0</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/ankle/weber-and-lauge-hansen-classification" class="">Ankle fractures - Weber and Lauge-Hansen Classification</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/ankle/special-fracture-cases" class="">Special Ankle Fractures</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/ankle/mri-examination" class="">MRI examination of the ankle</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/arthritis" class="text-white">Arthritis</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/arthritis/fractures-video-lesson" class="">Arthritis</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/bone-tumors" class="text-white">Bone Tumors</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/alphabetical-order" class="">Bone tumors in alphabetical order</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/differential-diagnosis" class="">Bone tumors - Differential diagnosis</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/osteolytic-ill-defined" class="">Osteolytic - ill defined bone tumors</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/osteolytic-well-defined" class="">Osteolytic - well defined bone tumors</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/sclerotic-tumors" class="">Sclerotic bone tumors</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/chondrotumors-1" class="">Cartilage tumors</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/wrist-1" class="text-white">Cases - pearls in radiology</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/wrist-1/foot" class="">Foot and Ankle cases</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/diabetic-foot" class="text-white">Diabetic foot</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/diabetic-foot/mri-examination" class="">MRI examination</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/elbow" class="text-white">Elbow</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/elbow/mri-examination" class="">MRI examination of the Elbow</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/elbow/fractures-in-children" class="">Elbow fractures in Children</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/hip" class="text-white">Hip</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/hip/arthroplasty" class="">Arthroplasty of the Hip</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/hip/femoroacetabular-impingement-syndrome" class="">Femoroacetabular impingement syndrome</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/knee" class="text-white">Knee</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/knee/meniscal-pathology" class="">Meniscal pathology</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/knee/non-meniscal-pathology" class="">Non-Meniscal pathology</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/knee/meniscus-special-cases" class="">Meniscus special cases</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/muscle" class="text-white">Muscle</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/muscle/mri-traumatic-changes" class="">MRI traumatic changes</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/muscle/non-traumatic-changes" class="">Non-traumatic changes</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/muscle/hamstring-injury" class="">Hamstring injury</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/shoulder" class="text-white">Shoulder</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/shoulder/mri-anatomy" class="">Shoulder Anatomy and Variants on MRI</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/shoulder/instability" class="">Shoulder instability - MRI</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/shoulder/rotator-cuff-injury" class="">Shoulder  Rotator cuff injury</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/shoulder/shoulder-ultrasound" class="">Shoulder Ultrasound</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/spine" class="text-white">Spine</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/spine/tlics-classification-1" class="">Spine fractures - TLICS Classification</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/spine/ao-classification" class="">AO Spine Classification of Thoracolumbar Fractures</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/unsorted" class="text-white">Stress fractures</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/unsorted/stress-fractures" class="">Stress fractures</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/ultrasound" class="text-white">Ultrasound</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/ultrasound/us-guided-injection-of-joints" class="">US-guided injection of joints</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/musculoskeletal/wrist" class="text-white">Wrist</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/musculoskeletal/wrist/carpal-instability" class="">Carpal instability</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/wrist/fractures" class="">Fractures</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/wrist/foot-1" class="">...</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                                <li class="main-nav__item">
+                    <a href="/neuroradiology" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">Neuroradiology</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/brain" class="text-white">Anatomy</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/brain/anatomy" class="">Brain Anatomy</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/brain-ischemia" class="text-white">Brain Ischemia</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/brain-ischemia/imaging-in-acute-stroke" class="">Imaging in Acute Stroke</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/brain-ischemia/vascular-territories" class="">Vascular territories of the Brain</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/brain-tumor" class="text-white">Brain Tumor</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/brain-tumor/systematic-approach" class="">Systematic Approach to Brain Tumors</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/carotid-pathology" class="text-white">Carotid Pathology</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/carotid-pathology/differentiating-carotid-pathology" class="">How to Differentiate Carotid Obstructions</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/dementia" class="text-white">Dementia</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/dementia/role-of-mri" class="">Dementia - Role of MRI</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/enhancement-patterns" class="text-white">Enhancement Patterns</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/enhancement-patterns/enhancement-patterns-in-cns-diseases" class="">Enhancement Patterns in CNS disease</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/epilepsy" class="text-white">Epilepsy</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/epilepsy/role-of-mri" class="">Epilepsy - Role of MRI</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/hemorrhage" class="text-white">Hemorrhage</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/hemorrhage/traumatic-intracranial-haemorrhage" class="">Traumatic Intracranial Hemorrhage</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/hemorrhage/non-traumatic-intracranial-hemorrhage" class="">Non-traumatic Intracranial Hemorrhage</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/multiple-sclerosis" class="text-white">Multiple Sclerosis</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/multiple-sclerosis/diagnosis-and-differential-diagnosis-3" class="">Multiple Sclerosis 2.0</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/sella-turcica" class="text-white">Sella Turcica</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/sella-turcica/sella-turcica-and-parasellar-region" class="">Sella Turcica and Parasellar Region</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/sinus-thrombosis" class="text-white">Sinus Thrombosis</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/sinus-thrombosis/cerebral-venous-thrombosis" class="">Cerebral Venous Sinus Thrombosis</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/spine" class="text-white">Spine</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/spine/cervical-injury" class="">Cervical injury</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/lumbar-disc-herniation" class="">Lumbar Disc Herniation</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/lumbar-disc-nomenclature-2-0" class="">Lumbar Disc Nomenclature 2.0</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/myelopathy" class="">Myelopathy</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/thoracolumbar-injury" class="">Thoracolumbar injury</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/tlics-classification" class="">TLICS Classification of fractures</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/neuroradiology/white-matter-disease-1" class="text-white">Intracranial Hypotension</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/neuroradiology/white-matter-disease-1/spontaneous-intracranial-hypotension" class="">Spontaneous Intracranial Hypotension</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                                <li class="main-nav__item">
+                    <a href="/pediatrics" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">Pediatrics</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/pediatrics/abdominal-masses" class="text-white">Abdomen</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/acute-abdomen-in-neonates" class="">Acute Abdomen in Neonates</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/cystic-abdominal-masses-in-children" class="">Cystic Abdominal Masses in Children</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/malignant-abdominal-tumors-in-children" class="">Solid Abdominal Masses in Children</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/renal-tumors-in-children" class="">Renal Tumors in Children</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/acute-scrotum-in-children" class="">Acute Scrotum in Children</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/lines-and-tubes-in-neonates" class="">Lines and tubes in Neonates</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/necrotizing-enterocolitis" class="">Necrotizing Enterocolitis </a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/pediatrics/pediatric-chest-ct" class="text-white">Chest</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/pediatrics/pediatric-chest-ct/nonvascular-mediastinal-masses" class="">Nonvascular Mediastinal Masses</a></li>
+    <li class="hover:underline"><a href="/pediatrics/pediatric-chest-ct/neonatal-chest" class="">Neonatal Chest X-Ray</a></li>
+    <li class="hover:underline"><a href="/pediatrics/pediatric-chest-ct/pediatric-chest-ct-2" class="">Pediatric Chest CT 2</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/pediatrics/child-abuse" class="text-white">Child Abuse</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/pediatrics/child-abuse/diagnostic-imaging-in-child-abuse" class="">Child abuse - Diagnostic Imaging 2.0</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/pediatrics/head-neck" class="text-white">Head/neck</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/pediatrics/head-neck/neck-masses-in-children-1" class="">Neck Masses in Children.</a></li>
+    <li class="hover:underline"><a href="/pediatrics/head-neck/craniosynosthosis" class="">Craniosynostosis</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/pediatrics/hip" class="text-white">Musculoskeletal</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/pediatrics/hip/developmental-dysplasia-of-the-hip-ultrasound" class="">Developmental Dysplasia of the Hip</a></li>
+    <li class="hover:underline"><a href="/pediatrics/hip/fractures-in-children-1" class="">Elbow fractures in Children.</a></li>
+    <li class="hover:underline"><a href="/pediatrics/hip/hip-pathology-in-children" class="">Hip pathology in Children</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/pediatrics/spine" class="text-white">Neuro</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/pediatrics/spine/neonatal-brain-us" class="">Neonatal Brain US</a></li>
+    <li class="hover:underline"><a href="/pediatrics/spine/ultrasound-of-the-neonatal-spine" class="">Ultrasound of the Neonatal spine</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/pediatrics/normal-values" class="text-white">Normal values</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/pediatrics/normal-values/normal-values-ultrasound" class="">Normal Values in Pediatric Ultrasound</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                                <li class="main-nav__item">
+                    <a href="/more" class="relative block p-1 lg:py-4 font-bold hover:text-white tracking-tight">More</a>
+                                        <div class="sub-nav-overlay bg-brand-800 z-10
+                                border-b border-t border-primary
+                                absolute w-full left-0
+                                pt-1 pb-4 px-8
+                                col-count-3 col-gap-16  break-in-avoid-column
+                                font-normal shadow-xl">
+
+                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/more/radioloy-assistant" class="text-white">ANBI</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/more/radioloy-assistant/anbi" class="">Jaarverslagen en financiële rapporten</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/more/radiology-assistant" class="text-white">Radiology Assistant</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/more/radiology-assistant/information" class="">Information</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                                                                            <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/more/apps" class="text-white">Apps</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/more/apps/radiology-assistant-2-0-app" class="">Radiology Assistant 2.0 app</a></li>
+    <li class="hover:underline"><a href="/more/apps/startradiology" class="">Radiology.expert</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/more/how-to-make-videos-illustrations" class="text-white">How to make videos and illustrations</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/more/how-to-make-videos-illustrations/how-to-make-illustrations-in-keynote" class="">How to make illustrations in Keynote</a></li>
+    <li class="hover:underline"><a href="/more/how-to-make-videos-illustrations/how-to-make-videos-in-quicktime-player" class="">How to make videos in Quicktime Player</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/more/ct-protocols" class="text-white">CT Protocols</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/more/ct-protocols/ct-contrast-injection-and-protocols" class="">CT contrast injection and protocols</a></li>
+
+
+                            </ul>
+                        </div>
+                                                                                                        <div class="mb-4 break-in-avoid-page">
+                            <h3 class="font-bold text-white">
+                                <a href="/more/recist-1-1" class="text-white">RECIST 1.1</a>
+                            </h3>
+                            <ul>
+                                    <li class="hover:underline"><a href="/more/recist-1-1/recist-1-1-examples" class="">RECIST 1.1 - examples</a></li>
+    <li class="hover:underline"><a href="/more/recist-1-1/recist-1-1" class="">RECIST 1.1 - and more</a></li>
+    <li class="hover:underline"><a href="/more/recist-1-1/recist-1-1-1" class="">RECIST 1.1 - the basics</a></li>
+
+
+                            </ul>
+                        </div>
+                                                    
+                    </div>
+                                    </li>
+                
+
+                <li class="hover:text-white">
+                    <a href="/search">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" ><path class="fill-current heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="block md:hidden mb-1">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<nav class="w-full pt-24  z-10 px-4 pt-6 hidden fixed overflow-scroll top-0 bottom-0 md:hidden bg-back" id="nav-content-sm" >
+    <ul class="mobile-nav
+              items-center
+            text-primary
+
+        ">
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">Abdomen<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Acute Abdomen<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/acute-abdomen/appendicitis-and-mimics" class="">Appendicitis and Mimics</a></li>
+    <li class="hover:underline"><a href="/abdomen/acute-abdomen/appendicitis-us-findings" class="">Appendicitis - US findings</a></li>
+    <li class="hover:underline"><a href="/abdomen/acute-abdomen/appendicitis-pitfalls-in-us-and-ct-diagnosis" class="">Appendicitis - Pitfalls in US and CT diagnosis</a></li>
+    <li class="hover:underline"><a href="/abdomen/acute-abdomen/ct-in-trauma" class="">CT in Abdominal Trauma</a></li>
+    <li class="hover:underline"><a href="/abdomen/acute-abdomen/practical-approach-to-acute-abdomen" class="">Practical approach to Acute Abdomen</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Anal cancer<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/anal-cancer-2/anal" class="">Anal cancer staging</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Abdominal wall<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/abdomen-1/abdominal-wall-hernias" class="">Abdominal wall hernias</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Adrenals<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/adrenals/lesion-characterization" class="">Characterization of Adrenal lesions</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Aorta<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/aorta/aneurysm-rupture" class="">Aortic Aneurysm Rupture</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Biliary system<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/biliary-system/lk-jg" class="">Gallbladder obstruction</a></li>
+    <li class="hover:underline"><a href="/abdomen/biliary-system/biliary-duct-pathology" class="">Biliary duct pathology</a></li>
+    <li class="hover:underline"><a href="/abdomen/biliary-system/gallbladder-wall-thickening" class="">Gallbladder wall thickening</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Bladder<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/bladder/bladder-cancer-vi-rads" class="">Bladder Cancer - VI-RADS</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Bowel<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/bowel/bowel-ischemia" class="">Bowel Ischemia - Video Lectures</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/bowel-wall-thickening-ct-pattern" class="">CT-pattern of Bowel wall thickening</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/closed-loop-in-small-bowel-obstruction" class="">Closed Loop in Small bowel obstruction</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/closed-loop-obstruction-with-video" class="">Closed Loop Obstruction with video</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/crohn-s-disease" class="">Crohn's disease - role of MRI</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/ultrasound-in-crohns-disease" class="">Crohn's disease - role of Ultrasound</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/small-bowel-tumors" class="">Small Bowel Tumors</a></li>
+    <li class="hover:underline"><a href="/abdomen/bowel/sharp-foreign-bodies-in-gi-tract" class="">Sharp foreign bodies in GI tract</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Chest radiology for Abdominal radiologists<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/chest-radiology-for-abdominal-radiologists/chest-radiology-for-abdominal-radiologists" class="">Thoracic Ultrasound in Acute Abdomen</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Gynaecology<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/unsorted/us-of-acute-gynaecology" class="">Acute Abdomen in Gynaecology - Ultrasound</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/endometriosis-mri-detection" class="">Endometriosis - MRI detection</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/mr-in-cervical-cancer-1" class="">Cervical Cancer - MR staging</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/mr-in-endometrial-cancer" class="">Endometrial Cancer - MR staging</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/mullerian-duct-anomalies" class="">Müllerian duct anomalies</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/common-ovarian-cystic-lesions" class="">Ovarian cystic lesions</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/roadmap-to-evaluate-ovarian-cysts" class="">Roadmap to evaluate ovarian cysts</a></li>
+    <li class="hover:underline"><a href="/abdomen/unsorted/common-ovarian-cystic-lesions-1" class="">Ovarian cystic lesions.</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Kidney<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/kidney/bozniak-2019" class="">Bosniak Classification 2019</a></li>
+    <li class="hover:underline"><a href="/abdomen/kidney/solid-masses" class="">Solid Renal Masses</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Liver<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/liver/characterisation-of-liver-masses" class="">Characterisation of liver masses</a></li>
+    <li class="hover:underline"><a href="/abdomen/liver/common-liver-tumors" class="">Common Liver Tumors</a></li>
+    <li class="hover:underline"><a href="/abdomen/liver/incidentalomas" class="">Incidentalomas in the liver</a></li>
+    <li class="hover:underline"><a href="/abdomen/liver/segmental-anatomy" class="">Liver - Segmental Anatomy</a></li>
+    <li class="hover:underline"><a href="/abdomen/liver/li-rads" class="">LI-RADS</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Ovarium<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/ovarium/roadmap-to-evaluate-ovarian-cysts-1" class="">Roadmap to evaluate ovarian cysts.</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Pancreas<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/pancreas/acute-pancreatitis" class="">Acute Pancreatitis</a></li>
+    <li class="hover:underline"><a href="/abdomen/pancreas/pancreas-carcinoma-1" class="">Pancreatic Cancer - CT staging 2.0</a></li>
+    <li class="hover:underline"><a href="/abdomen/pancreas/pancreas-cystic-lesions" class="">Pancreatic cystic Lesions</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Peritoneum<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/peritoneum/anatomy-of-peritoneum-and-mesentery" class="">Anatomy of Peritoneum and Mesentery</a></li>
+    <li class="hover:underline"><a href="/abdomen/peritoneum/peritoneal-carcinomatosis" class="">Peritoneal Carcinomatosis</a></li>
+    <li class="hover:underline"><a href="/abdomen/peritoneum/peritoneal-pathology" class="">Peritoneal Pathology</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Prostate<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/prostate/prostate-cancer-pi-rads-v2-1" class="">Prostate Cancer - PI-RADS v2.1</a></li>
+    <li class="hover:underline"><a href="/abdomen/prostate/prostate-cancer-pi-rads-v2-1-1" class="">Prostate Anatomy</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Rectum<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/rectum/rectal-cancer-mr-staging-1-1" class="">Rectal Cancer  MR staging and restaging- update 2026</a></li>
+    <li class="hover:underline"><a href="/abdomen/rectum/perianal-fistulas" class="">Perianal Fistulas</a></li>
+    <li class="hover:underline"><a href="/abdomen/rectum/dynamic-rectal-examination" class="">Dynamic Rectal examination</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Ultrasound<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/abdomen/ultrasound/transvaginal-ultrasound-for-non-gynaecological-conditions" class="">Transvaginal Ultrasound for Non-Gynaecological Conditions</a></li>
+    <li class="hover:underline"><a href="/abdomen/ultrasound/role-of-ultrasound-in-acute-abdomen" class="">Ultrasound in Acute Abdomen</a></li>
+    <li class="hover:underline"><a href="/abdomen/ultrasound/lk-jg-1-1-1" class="">US of the GI tract - Technique</a></li>
+    <li class="hover:underline"><a href="/abdomen/ultrasound/lk-jg-1-1" class="">US of the GI tract - Normal Anatomy</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">Breast<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>BI-RADS<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/breast/bi-rads/bi-rads-for-mammography-and-ultrasound-2013" class="">Bi-RADS for Mammography and Ultrasound 2013</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Calcifications<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/breast/calcifications/differential-of-breast-calcifications" class="">Differential of Breast Calcifications</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Breast Cancer<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/breast/breast-cancer/staging-and-treatment-of-breast-cancer" class="">Staging and Treatment of Breast Cancer</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Breast Prosthesis<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/breast/breast-prosthesis/breast-prosthesis-imaging" class="">Breast Implants</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Male Breast<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/breast/male-breast/pathology-of-the-male-breast" class="">Pathology of the Male Breast</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>MRI<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/breast/mri/mri-of-the-breast" class="">MRI of the Breast</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Ultrasound<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/breast/ultrasound/ultrasound-of-the-breast" class="">Ultrasound of the Breast</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">Cardiovascular<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Anatomy<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/cardiovascular/anatomy/cardiac-anatomy" class="">Cardiac Anatomy</a></li>
+    <li class="hover:underline"><a href="/cardiovascular/anatomy/coronary-anatomy-and-anomalies" class="">Coronary anatomy and anomalies</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>CAD-RADS<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/cardiovascular/cad-rads/coronary-artery-disease-reporting-and-data-system" class="">Coronary Artery Disease-Reporting and Data System 2.0</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Cardiomyopathy<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/cardiovascular/cardiomyopathy/ischemic-and-non-ischemic-cardiomyopathy" class="">Ischemic and non-ischemic cardiomyopathy</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Devices<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/cardiovascular/devices/cardiovascular-devices" class="">Cardiovascular devices</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Peripheral MRA<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/cardiovascular/peripheral-mra/contrast-enhanced-mra-of-peripheral-vessels" class="">Contrast-enhanced MRA of peripheral vessels</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Pearls...<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/cardiovascular/pearls/cardiovascular-pearls-on-chest-ct" class="">Cardiovascular Pearls on Chest CT...</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Pulmonary Hypertension<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/cardiovascular/thoracic-aorta-1/acute-aortic-syndrome-1" class="">Pulmonary Hypertension and Thromboembolic disease</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Thoracic Aorta<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/cardiovascular/thoracic-aorta/acute-aortic-syndrome" class="">Acute Aortic Syndrome</a></li>
+    <li class="hover:underline"><a href="/cardiovascular/thoracic-aorta/vascular-anomalies-of-aorta-pulmonary-and-systemic-vessels" class="">Vascular Anomalies of Aorta, Pulmonary and Systemic vessels</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">Chest<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Airways<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/airways/large-airway-disease" class="">Large airway disease</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Chest X-Ray<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/chest-x-ray/basic-interpretation" class="">Chest X-Ray - Basic Interpretation</a></li>
+    <li class="hover:underline"><a href="/chest/chest-x-ray/heart-failure" class="">Chest X-Ray - Heart Failure</a></li>
+    <li class="hover:underline"><a href="/chest/chest-x-ray/lung-disease" class="">Chest X-Ray - Lung disease</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>COVID-19<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/covid-19/covid19-imaging-findings" class="">COVID-19 Imaging findings</a></li>
+    <li class="hover:underline"><a href="/chest/covid-19/covid-19-differential-diagnosis" class="">COVID-19  Differential Diagnosis</a></li>
+    <li class="hover:underline"><a href="/chest/covid-19/corads-classification" class="">COVID-19  CO-RADS classification</a></li>
+    <li class="hover:underline"><a href="/chest/covid-19/ct-findings-in-patients" class="">32 cases of suspected COVID-19</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Cystic Lung Disease<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/cystic-lung-disease/analysis-of-cystic-lung-disease-1-1-1" class="">Cystic Lung Disease - Differential diagnosis</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Esophagus<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/esophagus/esophagus-i-anatomy-rings-inflammation" class="">Esophagus I: anatomy, rings, inflammation</a></li>
+    <li class="hover:underline"><a href="/chest/esophagus/esophagus-ii-strictures-acute-syndromes-neoplasms-and-vascular-impressions" class="">Esophagus II: Strictures, Acute syndromes, Neoplasms and Vascular impressions</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>HRCT<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/hrct/basic-interpretation" class="">HRCT - Basic Interpretation</a></li>
+    <li class="hover:underline"><a href="/chest/hrct/common-diseases" class="">HRCT - Common diagnoses</a></li>
+    <li class="hover:underline"><a href="/chest/hrct/fibrosis-of-the-lung-on-hrct-imaging" class="">HRCT – Patterns of pulmonary fibrosis in ILD</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Lung anatomy<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/lung-anatomy/lung-segments" class="">Lung Segments and Bronchi</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Lung Cancer<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/lung-cancer/tnm-classification-8th-edition-1" class="">TNM classification 9ᵗʰ edition</a></li>
+    <li class="hover:underline"><a href="/chest/lung-cancer/cystic-lung-cancer" class="">Cystic Lung Cancer</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Mediastinum<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/mediastinum/mediastinum-lymph-node-map" class="">Mediastinal Lymph Node Map</a></li>
+    <li class="hover:underline"><a href="/chest/mediastinum/masses-differential-diagnosis" class="">Mediastinal Masses - differential diagnosis</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Pearls<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/pearls/cardiovascular-pearls-on-chest-ct-2" class="">Cardiovascular Pearls on Chest CT.</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Pulmonary nodules<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/plumonary-nodules/bts-guideline" class="">BTS guideline of pulmonary nodules</a></li>
+    <li class="hover:underline"><a href="/chest/plumonary-nodules/fleischner-2017-guideline" class="">Fleischner 2017 guideline</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Solitary Pulmonary Nodule<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/solitary-pulmonary-nodule/benign-versus-malignant" class="">Pulmonary nodule - Benign versus Malignant</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Tuberculosis<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/tb/tuberculosis" class="">Imaging findings in TB</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Thymus<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/chest/thymus/thymus" class="">Thymic masses and mimics</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">Head/Neck<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Cervical Nodes<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/cervical-node-mapping/cervical-node-map" class="">Cervical Lymph Node Map</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Esophagus<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/esophagus-1/esophagus-i-anatomy-rings-inflammation-1" class="">Esophagus I: anatomy, rings, inflammation</a></li>
+    <li class="hover:underline"><a href="/head-neck/esophagus-1/esophagus-ii-strictures-acute-syndromes-neoplasms-and-vascular-impressions-1" class="">Esophagus II: Strictures, Acute syndromes, Neoplasms and Vascular impressions.</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Horner syndrome</h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                        
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Infra- and suprahyoid neck<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/infrahyoid-neck/anatomy-and-pathology" class="">Anatomy and Pathology of the Infrahyoid Neck</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Tumors<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/neck-masses/neck-masses-in-children" class="">Neck Masses in Children</a></li>
+    <li class="hover:underline"><a href="/head-neck/neck-masses/head-neck-tumors" class="">Head Neck tumors - When to think of malignancy</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Orbita<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/orbita/pathology" class="">CT and MRI of the Eye</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Paranasal Sinuses<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/paranasal-sinuses/mri-examination" class="">MRI of the Paranasal Sinuses</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Swallowing<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/swallowing/swallowing-disorders-update" class="">Swallowing disorders update</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Temporal Bone<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/temporal-bone/anatomy" class="">Temporal Bone Anatomy 1.0</a></li>
+    <li class="hover:underline"><a href="/head-neck/temporal-bone/anatomy-2-0" class="">Temporal Bone Anatomy 2.0</a></li>
+    <li class="hover:underline"><a href="/head-neck/temporal-bone/pathology" class="">Temporal Bone Pathology</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Tinnitus<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/tinnitus/pulsatile-and-non-pulsatile-tinnitus" class="">Pulsatile and non-pulsatile tinnitus</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>TI-RADS<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/ti-rads/ti-rads" class="">TI-RADS - Thyroid Imaging Reporting and Data System</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Trigeminus<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/head-neck/trigeminus/trigeminal-neuralgia-and-neuropathy" class=""> Trigeminal neuralgia</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">Musculoskeletal<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Ankle<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/ankle/fracture-mechanism-and-radiography" class="">Ankle Fracture Mechanism and Radiography</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/ankle/fractures-video-lesson-1" class="">Algoritm for Ankle Fractures 2.0</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/ankle/weber-and-lauge-hansen-classification" class="">Ankle fractures - Weber and Lauge-Hansen Classification</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/ankle/special-fracture-cases" class="">Special Ankle Fractures</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/ankle/mri-examination" class="">MRI examination of the ankle</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Arthritis<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/arthritis/fractures-video-lesson" class="">Arthritis</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Bone Tumors<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/alphabetical-order" class="">Bone tumors in alphabetical order</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/differential-diagnosis" class="">Bone tumors - Differential diagnosis</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/osteolytic-ill-defined" class="">Osteolytic - ill defined bone tumors</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/osteolytic-well-defined" class="">Osteolytic - well defined bone tumors</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/sclerotic-tumors" class="">Sclerotic bone tumors</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/bone-tumors/chondrotumors-1" class="">Cartilage tumors</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Cases - pearls in radiology<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/wrist-1/foot" class="">Foot and Ankle cases</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Diabetic foot<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/diabetic-foot/mri-examination" class="">MRI examination</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Elbow<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/elbow/mri-examination" class="">MRI examination of the Elbow</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/elbow/fractures-in-children" class="">Elbow fractures in Children</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Hip<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/hip/arthroplasty" class="">Arthroplasty of the Hip</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/hip/femoroacetabular-impingement-syndrome" class="">Femoroacetabular impingement syndrome</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Knee<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/knee/meniscal-pathology" class="">Meniscal pathology</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/knee/non-meniscal-pathology" class="">Non-Meniscal pathology</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/knee/meniscus-special-cases" class="">Meniscus special cases</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Muscle<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/muscle/mri-traumatic-changes" class="">MRI traumatic changes</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/muscle/non-traumatic-changes" class="">Non-traumatic changes</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/muscle/hamstring-injury" class="">Hamstring injury</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Shoulder<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/shoulder/mri-anatomy" class="">Shoulder Anatomy and Variants on MRI</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/shoulder/instability" class="">Shoulder instability - MRI</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/shoulder/rotator-cuff-injury" class="">Shoulder  Rotator cuff injury</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/shoulder/shoulder-ultrasound" class="">Shoulder Ultrasound</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Spine<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/spine/tlics-classification-1" class="">Spine fractures - TLICS Classification</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/spine/ao-classification" class="">AO Spine Classification of Thoracolumbar Fractures</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Soft tissue</h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                        
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Stress fractures<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/unsorted/stress-fractures" class="">Stress fractures</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Ultrasound<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/ultrasound/us-guided-injection-of-joints" class="">US-guided injection of joints</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Wrist<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/musculoskeletal/wrist/carpal-instability" class="">Carpal instability</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/wrist/fractures" class="">Fractures</a></li>
+    <li class="hover:underline"><a href="/musculoskeletal/wrist/foot-1" class="">...</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">Neuroradiology<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Anatomy<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/brain/anatomy" class="">Brain Anatomy</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Brain Ischemia<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/brain-ischemia/imaging-in-acute-stroke" class="">Imaging in Acute Stroke</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/brain-ischemia/vascular-territories" class="">Vascular territories of the Brain</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Brain Tumor<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/brain-tumor/systematic-approach" class="">Systematic Approach to Brain Tumors</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Carotid Pathology<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/carotid-pathology/differentiating-carotid-pathology" class="">How to Differentiate Carotid Obstructions</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Dementia<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/dementia/role-of-mri" class="">Dementia - Role of MRI</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Enhancement Patterns<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/enhancement-patterns/enhancement-patterns-in-cns-diseases" class="">Enhancement Patterns in CNS disease</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Epilepsy<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/epilepsy/role-of-mri" class="">Epilepsy - Role of MRI</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Hemorrhage<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/hemorrhage/traumatic-intracranial-haemorrhage" class="">Traumatic Intracranial Hemorrhage</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/hemorrhage/non-traumatic-intracranial-hemorrhage" class="">Non-traumatic Intracranial Hemorrhage</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Horner syndrome.</h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                        
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Multiple Sclerosis<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/multiple-sclerosis/diagnosis-and-differential-diagnosis-3" class="">Multiple Sclerosis 2.0</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Sella Turcica<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/sella-turcica/sella-turcica-and-parasellar-region" class="">Sella Turcica and Parasellar Region</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Sinus Thrombosis<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/sinus-thrombosis/cerebral-venous-thrombosis" class="">Cerebral Venous Sinus Thrombosis</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Spine<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/spine/cervical-injury" class="">Cervical injury</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/lumbar-disc-herniation" class="">Lumbar Disc Herniation</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/lumbar-disc-nomenclature-2-0" class="">Lumbar Disc Nomenclature 2.0</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/myelopathy" class="">Myelopathy</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/thoracolumbar-injury" class="">Thoracolumbar injury</a></li>
+    <li class="hover:underline"><a href="/neuroradiology/spine/tlics-classification" class="">TLICS Classification of fractures</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Intracranial Hypotension<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/neuroradiology/white-matter-disease-1/spontaneous-intracranial-hypotension" class="">Spontaneous Intracranial Hypotension</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">Pediatrics<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Abdomen<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/pediatrics/abdominal-masses/acute-abdomen-in-neonates" class="">Acute Abdomen in Neonates</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/cystic-abdominal-masses-in-children" class="">Cystic Abdominal Masses in Children</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/malignant-abdominal-tumors-in-children" class="">Solid Abdominal Masses in Children</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/renal-tumors-in-children" class="">Renal Tumors in Children</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/acute-scrotum-in-children" class="">Acute Scrotum in Children</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/lines-and-tubes-in-neonates" class="">Lines and tubes in Neonates</a></li>
+    <li class="hover:underline"><a href="/pediatrics/abdominal-masses/necrotizing-enterocolitis" class="">Necrotizing Enterocolitis </a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Chest<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/pediatrics/pediatric-chest-ct/nonvascular-mediastinal-masses" class="">Nonvascular Mediastinal Masses</a></li>
+    <li class="hover:underline"><a href="/pediatrics/pediatric-chest-ct/neonatal-chest" class="">Neonatal Chest X-Ray</a></li>
+    <li class="hover:underline"><a href="/pediatrics/pediatric-chest-ct/pediatric-chest-ct-2" class="">Pediatric Chest CT 2</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Child Abuse<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/pediatrics/child-abuse/diagnostic-imaging-in-child-abuse" class="">Child abuse - Diagnostic Imaging 2.0</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Head/neck<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/pediatrics/head-neck/neck-masses-in-children-1" class="">Neck Masses in Children.</a></li>
+    <li class="hover:underline"><a href="/pediatrics/head-neck/craniosynosthosis" class="">Craniosynostosis</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Musculoskeletal<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/pediatrics/hip/developmental-dysplasia-of-the-hip-ultrasound" class="">Developmental Dysplasia of the Hip</a></li>
+    <li class="hover:underline"><a href="/pediatrics/hip/fractures-in-children-1" class="">Elbow fractures in Children.</a></li>
+    <li class="hover:underline"><a href="/pediatrics/hip/hip-pathology-in-children" class="">Hip pathology in Children</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Neuro<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/pediatrics/spine/neonatal-brain-us" class="">Neonatal Brain US</a></li>
+    <li class="hover:underline"><a href="/pediatrics/spine/ultrasound-of-the-neonatal-spine" class="">Ultrasound of the Neonatal spine</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Normal values<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/pediatrics/normal-values/normal-values-ultrasound" class="">Normal Values in Pediatric Ultrasound</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+                <li class="mobile-nav__category ">
+            <a href="/" class="mobile-nav__category-title">More<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></a>
+
+            <ul class="mobile-nav__sub-category-list ">
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>ANBI<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/more/radioloy-assistant/anbi" class="">Jaarverslagen en financiële rapporten</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Radiology Assistant<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/more/radiology-assistant/information" class="">Information</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Video-Lectures</h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                        
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>Apps<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/more/apps/radiology-assistant-2-0-app" class="">Radiology Assistant 2.0 app</a></li>
+    <li class="hover:underline"><a href="/more/apps/startradiology" class="">Radiology.expert</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>How to make videos and illustrations<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/more/how-to-make-videos-illustrations/how-to-make-illustrations-in-keynote" class="">How to make illustrations in Keynote</a></li>
+    <li class="hover:underline"><a href="/more/how-to-make-videos-illustrations/how-to-make-videos-in-quicktime-player" class="">How to make videos in Quicktime Player</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>CT Protocols<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/more/ct-protocols/ct-contrast-injection-and-protocols" class="">CT contrast injection and protocols</a></li>
+
+                    </ul>
+
+                </li>
+                
+                <li class="mobile-nav__sub-category ">
+                    <h3>RECIST 1.1<svg viewBox="0 0 32 32" style="fill: white;" class="w-4 inline" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 18.626l7.081-7.081L25 13.46l-8.997 8.998-9.003-9 1.917-1.916z"/></svg></h3>
+
+
+                    <ul class="mobile-nav__sub-category-articles">
+                            <li class="hover:underline"><a href="/more/recist-1-1/recist-1-1-examples" class="">RECIST 1.1 - examples</a></li>
+    <li class="hover:underline"><a href="/more/recist-1-1/recist-1-1" class="">RECIST 1.1 - and more</a></li>
+    <li class="hover:underline"><a href="/more/recist-1-1/recist-1-1-1" class="">RECIST 1.1 - the basics</a></li>
+
+                    </ul>
+
+                </li>
+                
+            </ul>
+        </li>
+        
+
+    </ul>
+</nav>
+
+
+
+<div id="container" class="px-4 md:px-6 w-full">
+    <div class="max-w-5xl mx-auto pt-24 lg:pt-20">
+        <div id="content" class="mb-6">
+    <h1>Page not found</h1>
+    <p class="text-white">The page you requested does not exist (anymore).</p>
+</div>
+
+    </div>
+</div>
+
+<nav class="px-4 md:px-6  w-full ">
+    <ul class="max-w-5xl mx-auto flex flex-wrap border-t border-primary text-primary py-2">
+                <li class="px-2">
+            <a class="hover:text-white" href="/guidelines-for-authors" title="Guidelines for authors">Guidelines for authors</a>
+        </li>
+                <li class="px-2">
+            <a class="hover:text-white" href="/about-us" title="About Us">About Us</a>
+        </li>
+                <li class="px-2">
+            <a class="hover:text-white" href="/disclaimer" title="Disclaimer">Disclaimer</a>
+        </li>
+                <li class="px-2">
+            <a class="hover:text-white" href="/charity" title="Charity">Charity</a>
+        </li>
+                <li class="px-2">
+            <a class="hover:text-white" href="/privacy-and-cookie-statement" title="Privacy and cookie statement">Privacy and cookie statement</a>
+        </li>
+                <li class="px-2">
+            <a class="hover:text-white" href="/contact-us" title="Contact us">Contact us</a>
+        </li>
+                <li class="px-2">
+            <a class="hover:text-white" href="/search" title="Search">Search</a>
+        </li>
+        
+
+    </ul>
+</nav>
+
+<script src="https://radiologyassistant.nl/site/themes/radiology-assistant/js/dist.js"></script>
+
+<script>
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    $(function () {
+        function move(element, direction) {
+            let count = $("li", element).length;
+            let active = $("li:not(.hidden)", element).prevAll().length;
+            let next = active - direction;
+
+            if (next < count && next >= 0) {
+                $("li:eq(" + active + ")", element).addClass('hidden')
+                $("li:eq(" + next + ")", element).removeClass('hidden')
+                $(".progress", element).text((next + 1) + " / " + count);
+            }
+
+        }
+
+        console.log("Setup image stacks");
+        $(".imageStack").each(function (index, element) {
+            $(".previous", element).on("click", function () {
+                move(element, 1);
+            });
+
+            $(".next", element).on("click", function () {
+                move(element, -1);
+            });
+
+            $(element).mousewheel(function (event) {
+                move(event.currentTarget, event.deltaY);
+
+                return false;
+            });
+
+            // Initialize progress text
+            move(element, 0);
+        });
+
+        $(".photoswipe").on("click", function (e){
+            console.log(e.currentTarget);
+
+            var a = $("a", e.currentTarget).first();
+
+
+            var items = [
+                {
+                    src: a.attr('href'),
+                    w: a.data('width'),
+                    h: a.data('height')
+                }
+            ];
+
+            var options = {
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0,
+                closeOnScroll: false,
+                history: false,
+
+                closeEl:true,
+                captionEl: true,
+                fullscreenEl: true,
+                zoomEl: true,
+                shareEl: false,
+                counterEl: true,
+                arrowEl: true,
+                preloaderEl: true,
+            };
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+
+            return false;
+
+
+        })
+    });
+</script>
+<script>
+    // Navigation toggle
+    document.addEventListener('DOMContentLoaded', function () {
+        let navToggle = document.getElementById('nav-toggle');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', function () {
+                let navMenu = document.getElementById('nav-content-sm');
+                navMenu.classList.toggle('hidden');
+            });
+        }
+
+
+        let navCategories = document.querySelectorAll('.mobile-nav__category');
+
+        navCategories.forEach(function (el) {
+            let title = el.querySelector('a');
+
+            title.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.parentElement.classList.toggle('expanded');
+                return !1
+            });
+        });
+
+        let navSubCategories = document.querySelectorAll('.mobile-nav__sub-category');
+
+        navSubCategories.forEach(function (el) {
+            let title = el.querySelector('h3');
+
+            title.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.parentElement.classList.toggle('expanded');
+                return !1
+            });
+        })
+    });
+</script>
+
+<div id="reactContent"></div>
+<script>
+var reactGpdrSettings = {
+    whitelist: /privacy/i.test(window.location.href),
+    ignoreUserAgent: /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent),
+    title: 'Privacy and cookie notification',
+    intro: 'This website uses cookies.<br />With this we ensure that the website works. Select one of the two options and click \'Accept\'. Read the <a href="/privacy-and-cookie-statement">privacy and cookie statement</a>.',
+    button: 'Continue',
+    level1: '<h4>Minimal:</h4> We use cookies that are necessary to visit our website. Your visit and data will not be tracked.',
+    level3: '<h4>Optimal:</h4> With this choice the website works optimally. We use cookies that are necessary to visit our website. By accepting cookies from external parties you also see videos.',
+    iFrameBlob: '<div id="gdpr-jhluau0n" class="gdpr-legacy"><div class="changeSettings"><div><svg aria-hidden="true" data-prefix="fas" data-icon="eye-slash" class="svg-inline--fa fa-eye-slash fa-w-18 mooidingetje" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M286.693 391.984l32.579 46.542A333.958 333.958 0 0 1 288 440C168.19 440 63.031 376.051 6.646 280.369a47.999 47.999 0 0 1 0-48.739c24.023-40.766 56.913-75.775 96.024-102.537l57.077 81.539C154.736 224.82 152 240.087 152 256c0 74.736 60.135 135.282 134.693 135.984zm282.661-111.615c-31.667 53.737-78.747 97.46-135.175 125.475l.011.015 41.47 59.2c7.6 10.86 4.96 25.82-5.9 33.42l-13.11 9.18c-10.86 7.6-25.82 4.96-33.42-5.9L100.34 46.94c-7.6-10.86-4.96-25.82 5.9-33.42l13.11-9.18c10.86-7.6 25.82-4.96 33.42 5.9l51.038 72.617C230.68 75.776 258.905 72 288 72c119.81 0 224.969 63.949 281.354 159.631a48.002 48.002 0 0 1 0 48.738zM424 256c0-75.174-60.838-136-136-136-17.939 0-35.056 3.473-50.729 9.772l19.299 27.058c25.869-8.171 55.044-6.163 80.4 7.41h-.03c-23.65 0-42.82 19.17-42.82 42.82 0 23.626 19.147 42.82 42.82 42.82 23.65 0 42.82-19.17 42.82-42.82v-.03c18.462 34.49 16.312 77.914-8.25 110.95v.01l19.314 27.061C411.496 321.2 424 290.074 424 256zM262.014 356.727l-77.53-110.757c-5.014 52.387 29.314 98.354 77.53 110.757z"></path></svg> To see this resource your <a href="#gdprSettings">cookie settings</a> need to be set to <strong>Optimal</strong>.</div></div></div>'
+};
+</script>
+<script src="https://radiologyassistant.nl/site/themes/radiology-assistant/js/gdpr.js"></script>
+</body>
+</html>
