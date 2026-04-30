@@ -97,10 +97,12 @@ export default function FindingDetailPanel({ finding, mode = 'patient' }: Findin
       </div>
 
       {/* ── Second Opinion AI Verification ───────────────────────────── */}
-      <SecondOpinionDetails 
-        finding={finding} 
-        isLoading={finding.second_opinion === 'pending'} 
-      />
+      {mode === 'dentist' && (
+        <SecondOpinionDetails 
+          finding={finding} 
+          isLoading={finding.second_opinion === 'pending'} 
+        />
+      )}
     </div>
   );
 }

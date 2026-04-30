@@ -206,11 +206,12 @@ export function validateAnalysisResult(data: any): ScanResult {
   // Deduplicate and fallback for treatment_plan
   const treatment = data.treatment || {};
   
-  // If backend returns 0 (e.g. Gemini quota error), use our local aggregation
   const backendCostLow = treatment.cost_estimate_inr?.low ?? 0;
   const cost_estimate = backendCostLow > 0 
     ? treatment.cost_estimate_inr 
-    : { low: Math.max(2000, aggregatedLow), high: Math.max(5000, aggregatedHigh) };
+    : findings.length === 0
+      ? { low: 0, high: 0 }
+      : { low: Math.max(2000, aggregatedLow), high: Math.max(5000, aggregatedHigh) };
 
   const result: ScanResult = {
     ...data,

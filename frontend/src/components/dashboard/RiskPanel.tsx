@@ -138,10 +138,14 @@ export default function RiskPanel({ result }: Props) {
           <span className="text-2xl font-extrabold text-white">
             ₹{result.treatment.cost_estimate_inr.low.toLocaleString('en-IN')}
           </span>
-          <span className="text-gray-500 text-sm mb-0.5">—</span>
-          <span className="text-2xl font-extrabold text-brand-400">
-            ₹{result.treatment.cost_estimate_inr.high.toLocaleString('en-IN')}
-          </span>
+          {result.treatment.cost_estimate_inr.high > 0 && (
+            <>
+              <span className="text-gray-500 text-sm mb-0.5">—</span>
+              <span className="text-2xl font-extrabold text-brand-400">
+                ₹{result.treatment.cost_estimate_inr.high.toLocaleString('en-IN')}
+              </span>
+            </>
+          )}
         </div>
         <div className="space-y-2 mt-3">
           {result.treatment.procedures.map((p, i) => (
@@ -181,23 +185,25 @@ export default function RiskPanel({ result }: Props) {
       </div>
 
       {/* If Untreated Warnings */}
-      <div className="card p-4 border-red-900/30 bg-red-950/10">
-        <div className="flex items-center gap-2 mb-3">
-          <AlertOctagon className="w-4 h-4 text-red-400" />
-          <p className="section-label !mb-0 text-red-400/80">If Left Untreated…</p>
-        </div>
-        <div className="space-y-2.5">
-          {untreatedWarnings.map((w, i) => (
-            <div key={i} className="flex gap-2.5">
-              <div className="shrink-0 w-1.5 h-1.5 rounded-full bg-red-500 mt-1.5" />
-              <div>
-                <span className="text-xs font-semibold text-red-300 font-mono">{w.tooth}: </span>
-                <span className="text-xs text-gray-400">{w.warning}</span>
+      {untreatedWarnings.length > 0 && (
+        <div className="card p-4 border-red-900/30 bg-red-950/10">
+          <div className="flex items-center gap-2 mb-3">
+            <AlertOctagon className="w-4 h-4 text-red-400" />
+            <p className="section-label !mb-0 text-red-400/80">If Left Untreated…</p>
+          </div>
+          <div className="space-y-2.5">
+            {untreatedWarnings.map((w, i) => (
+              <div key={i} className="flex gap-2.5">
+                <div className="shrink-0 w-1.5 h-1.5 rounded-full bg-red-500 mt-1.5" />
+                <div>
+                  <span className="text-xs font-semibold text-red-300 font-mono">{w.tooth}: </span>
+                  <span className="text-xs text-gray-400">{w.warning}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

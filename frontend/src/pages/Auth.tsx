@@ -13,7 +13,6 @@ export default function Auth() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [showSuccess, setShowSuccess] = useState(false);
   const [resending, setResending] = useState(false);
   const [lastRequestTime, setLastRequestTime] = useState(0);
 
@@ -96,10 +95,11 @@ export default function Auth() {
           return;
         }
 
-        // If no session but user was created (confirmation required), 
-        // we show the success screen.
+        // If no session but user was created (confirmation required),
+        // let them enter the app without signing in as requested by user.
         if (data.user) {
-          setShowSuccess(true);
+          // You could optionally show a small toast here
+          navigate('/');
         }
       }
     } catch (err: any) {
@@ -113,38 +113,6 @@ export default function Auth() {
       setLoading(false);
     }
   };
-
-  if (showSuccess) {
-    return (
-      <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center p-6 bg-surface">
-        <div className="w-full max-w-md text-center space-y-6 animate-fade-in">
-          <div className="w-20 h-20 bg-emerald-500/20 border border-emerald-500/30 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Mail className="w-10 h-10 text-emerald-400" />
-          </div>
-          <h1 className="text-3xl font-extrabold text-white">Check your email</h1>
-          <p className="text-gray-400 leading-relaxed">
-            We've sent a confirmation link to <span className="text-white font-bold">{email}</span>.<br/>
-            Please click the link to activate your account.
-          </p>
-          <div className="pt-4 space-y-4">
-            <button 
-              onClick={handleResend}
-              disabled={resending}
-              className="btn-secondary w-full py-3"
-            >
-              {resending ? "Resending..." : "Didn't get the email? Resend"}
-            </button>
-            <button 
-              onClick={() => setShowSuccess(false)}
-              className="text-brand-400 font-bold hover:text-brand-300 underline block mx-auto"
-            >
-              Back to Sign In
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   const isUnconfirmed = error?.toLowerCase().includes("not confirmed");
 

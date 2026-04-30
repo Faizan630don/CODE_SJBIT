@@ -1,17 +1,40 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LayoutDashboard, ArrowLeft, Upload, User2 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
+import api from '../services/api';
 import XrayViewer from '../components/viewer/XrayViewer';
 import FindingsList from '../components/viewer/FindingsList';
 
 export default function Viewer() {
   const navigate = useNavigate();
-  const { scanResult, uploadedImageUrl } = useApp();
+  const { scanResult, setScanResult, uploadedImageUrl } = useApp();
+  const fetchedRef = useRef(false);
 
   useEffect(() => {
-    if (!scanResult) navigate('/');
-  }, [scanResult, navigate]);
+    if (!scanResult) {
+      navigate('/');
+      return;
+    }
+
+    if (!fetchedRef.current && scanResult.findings.some(f => f.second_opinion === 'pending')) {
+      fetchedRef.current = true;
+      api.fetchSecondOpinion(scanResult.findings).then((soResult) => {
+        if (soResult && soResult.consensus) {
+          const updatedFindings = scanResult.findings.map(f => {
+            const agree = soResult.consensus.agreements?.find((a: any) => a.id === f.id);
+            const disagree = soResult.consensus.disagreements?.find((d: any) => d.id === f.id);
+            if (agree) return { ...f, second_opinion: 'agree' as const };
+            if (disagree) return { ...f, second_opinion: 'disagree' as const };
+            return f;
+          });
+          setScanResult({ ...scanResult, findings: updatedFindings });
+        }
+      }).catch(err => {
+        console.error("Second opinion fetch failed:", err);
+      });
+    }
+  }, [scanResult, navigate, setScanResult]);
 
   if (!scanResult) return null;
 

@@ -4,7 +4,7 @@ import { ArrowLeft, Download, Volume2, VolumeX } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import {
   type Lang, LANG_META, UI, FINDINGS_L10N, FALLBACK_L10N,
-  pickFemaleVoice, getVoiceAvailability,
+  pickFemaleVoice, initVoiceAvailability,
 } from '../utils/translations';
 
 /** Map language to its Noto script font */
@@ -81,11 +81,11 @@ export default function PatientView() {
   const [voiceNotice, setVoiceNotice] = useState<string | null>(null);
   const [voiceAvail, setVoiceAvail] = useState<Record<Lang, boolean>>({ en:true, hi:false, te:false, kn:false, ta:false });
 
-  // Load voice availability after voices populate
+  // Load voice availability safely handling async engine initialization
   useEffect(() => {
-    const update = () => setVoiceAvail(getVoiceAvailability());
-    window.speechSynthesis.onvoiceschanged = update;
-    update();
+    initVoiceAvailability((availability) => {
+      setVoiceAvail(availability);
+    });
   }, []);
 
   useEffect(() => {

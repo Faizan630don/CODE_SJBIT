@@ -32,12 +32,15 @@ function isFemaleVoice(v: SpeechSynthesisVoice): boolean {
   return FEMALE_HINTS.some(h => name.includes(h));
 }
 
+/** * STRICT per-language fallback. 
+ * Do NOT mix scripts (e.g., no 'hi-IN' fallback for 'te-IN').
+ */
 const FALLBACK_CHAIN: Record<string, string[]> = {
-  'te': ['te', 'te-IN', 'hi-IN', 'hi', 'en-IN', 'en'],
-  'kn': ['kn', 'kn-IN', 'ta-IN', 'ta', 'hi-IN', 'hi', 'en-IN', 'en'],
-  'ta': ['ta', 'ta-IN', 'hi-IN', 'hi', 'en-IN', 'en'],
-  'hi': ['hi', 'hi-IN', 'en-IN', 'en'],
-  'en': ['en-IN', 'en'],
+  'te': ['te-IN', 'te'],
+  'kn': ['kn-IN', 'kn'],
+  'ta': ['ta-IN', 'ta'],
+  'hi': ['hi-IN', 'hi'],
+  'en': ['en-IN', 'en-GB', 'en-US', 'en'], // English has wider safe fallbacks
 };
 
 export interface VoiceResult {
@@ -50,7 +53,7 @@ export function pickFemaleVoice(bcp47: string): VoiceResult {
   const voices = window.speechSynthesis.getVoices();
   if (!voices.length) return { voice: null, usedLang: bcp47, isFallback: false };
 
-  const langCode = bcp47.split('-')[0].toLowerCase();
+  const langCode = bcp47.split('-')[0].toLowerCase(); 
 
   const bestFrom = (list: SpeechSynthesisVoice[]): SpeechSynthesisVoice | null => {
     if (!list.length) return null;
@@ -58,36 +61,48 @@ export function pickFemaleVoice(bcp47: string): VoiceResult {
     return female[0] ?? list[0];
   };
 
-  const exactMatches = voices.filter(v =>
-    v.lang.toLowerCase() === bcp47.toLowerCase()
-  );
+  // Tier 1: exact BCP-47 match
+  const exactMatches = voices.filter(v => v.lang.toLowerCase() === bcp47.toLowerCase());
   if (exactMatches.length) {
     return { voice: bestFrom(exactMatches)!, usedLang: bcp47, isFallback: false };
   }
 
-  const prefixMatches = voices.filter(v =>
-    v.lang.toLowerCase().startsWith(langCode + '-') ||
-    v.lang.toLowerCase() === langCode
-  );
-  if (prefixMatches.length) {
-    return { voice: bestFrom(prefixMatches)!, usedLang: prefixMatches[0].lang, isFallback: false };
-  }
-
-  const chain = FALLBACK_CHAIN[langCode] ?? FALLBACK_CHAIN['en'];
-  for (const tag of chain) {
-    const tagCode = tag.split('-')[0].toLowerCase();
-    const matches = voices.filter(v => {
-      const vl = v.lang.toLowerCase();
-      return vl === tag.toLowerCase() || vl.startsWith(tagCode + '-');
-    });
-    if (matches.length) {
-      const chosen = bestFrom(matches)!;
-      return { voice: chosen, usedLang: chosen.lang, isFallback: true };
+  // Tier 2: Walk the strict fallback chain for this language
+  const chain = FALLBACK_CHAIN[langCode];
+  if (chain) {
+    for (const tag of chain) {
+      const tagCode = tag.split('-')[0].toLowerCase();
+      const matches = voices.filter(v => {
+        const vl = v.lang.toLowerCase();
+        return vl === tag.toLowerCase() || vl.startsWith(tagCode + '-');
+      });
+      if (matches.length) {
+        const chosen = bestFrom(matches)!;
+        return { voice: chosen, usedLang: chosen.lang, isFallback: true };
+      }
     }
   }
 
-  const any = bestFrom(voices);
-  return { voice: any, usedLang: any?.lang ?? 'en', isFallback: true };
+  // Tier 3: If no valid voice engine exists for this specific script, fail gracefully.
+  // We do NOT return an English voice for regional scripts.
+  return { voice: null, usedLang: bcp47, isFallback: true };
+}
+
+export function initVoiceAvailability(onReady: (availability: Record<Lang, boolean>) => void) {
+  const checkVoices = () => {
+    const availability = getVoiceAvailability();
+    onReady(availability);
+  };
+
+  // Check immediately in case they are already loaded
+  if (window.speechSynthesis.getVoices().length > 0) {
+    checkVoices();
+  } else {
+    // Wait for the async load on Android/macOS
+    window.speechSynthesis.onvoiceschanged = () => {
+      checkVoices();
+    };
+  }
 }
 
 export function getVoiceAvailability(): Record<Lang, boolean> {
@@ -380,13 +395,13 @@ export const FINDINGS_L10N: Record<Lang, Record<ConditionKey, FindingL10n>> = {
       icon: '📉',
       title: 'చిగురు ఎముక తగ్గిపోతోంది',
       desc:  'మీ దంతాలను స్థానంలో ఉంచే ఎముక నెమ్మదిగా తగ్గిపోతోంది. ఇది చిగురు వ్యాధి వల్ల జరుగుతుంది.',
-      action: 'స్కేలింగ్ అని పిలిచే లోతైన శుభ్రపరచడం అవసరం. తగ్గిపోవడాన్ని ఆపుతుంది.',
+      action: 'స్కేలింగ్ (డీప్ క్లీనింగ్) అవసరం. ఇది ఎముక అరుగుదలను ఆపుతుంది.',
     },
     'Bone Loss (Periodontitis)': {
       icon: '📉',
       title: 'చిగురు ఎముక తగ్గిపోతోంది',
       desc:  'మీ దంతాలను స్థానంలో ఉంచే ఎముక నెమ్మదిగా తగ్గిపోతోంది. ఇది చిగురు వ్యాధి వల్ల జరుగుతుంది.',
-      action: 'స్కేలింగ్ అని పిలిచే లోతైన శుభ్రపరచడం అవసరం. తగ్గిపోవడాన్ని ఆపుతుంది.',
+      action: 'స్కేలింగ్ (డీప్ క్లీనింగ్) అవసరం. ఇది ఎముక అరుగుదలను ఆపుతుంది.',
     },
     'Root Infection': {
       icon: '🦠',
@@ -408,8 +423,8 @@ export const FINDINGS_L10N: Record<Lang, Record<ConditionKey, FindingL10n>> = {
     },
     'Impacted Wisdom Tooth': {
       icon: '😬',
-      title: 'వంకర అక్కిలి దంతం',
-      desc:  'మీ అక్కిలి దంతం వంకరగా పెరుగుతూ ఇతర దంతాలను నెట్టవచ్చు.',
+      title: 'వంకర జ్ఞాన దంతం',
+      desc:  'మీ జ్ఞాన దంతం వంకరగా పెరుగుతూ ఇతర దంతాలను నెట్టవచ్చు.',
       action: 'తొలగింపు అవసరమవుతుందేమో. తీవ్రత ఆధారంగా దంత వైద్యుడు సలహా ఇస్తారు.',
     },
     'Old Filling Failure': {
@@ -423,13 +438,13 @@ export const FINDINGS_L10N: Record<Lang, Record<ConditionKey, FindingL10n>> = {
     'Cavity': {
       icon: '🕳️',
       title: 'ಹಲ್ಲಿನಲ್ಲಿ ರಂಧ್ರ',
-      desc:  'ಬ್ಯಾಕ್ಟೀರಿಯಾ ನಿಮ್ಮ ಹಲ್ಲಿನ ಲೇಪನ ಪದರವನ್ನು ತಿಂದಿದೆ. ರಸ್ತೆ ಗುಂಡಿಯಂತೆ ಯೋಚಿಸಿ — ಈಗ ಚಿಕ್ಕದು, ನಿರ್ಲಕ್ಷಿಸಿದರೆ ದೊಡ್ಡದಾಗುತ್ತದೆ.',
+      desc:  'ಬ್ಯಾಕ್ಟೀರಿಯಾ ನಿಮ್ಮ ಹಲ್ಲಿನ ಲೇಪನ ಪದರವನ್ನು ತಿಂದಿದೆ. ಇದು ರಸ್ತೆಯ ಗುಂಡಿಯಂತೆಯೇ — ಈಗ ಚಿಕ್ಕದಾಗಿದೆ, ನಿರ್ಲಕ್ಷಿಸಿದರೆ ದೊಡ್ಡದಾಗುತ್ತದೆ.',
       action: 'ಫಿಲ್ಲಿಂಗ್ ಅಗತ್ಯ. ಒಂದೇ ಭೇಟಿಯಲ್ಲಿ ಮುಗಿಯುವ ಸರಳ ಕಾರ್ಯವಿಧಾನ.',
     },
     'Cavity (Dental Caries)': {
       icon: '🕳️',
       title: 'ಹಲ್ಲಿನಲ್ಲಿ ರಂಧ್ರ',
-      desc:  'ಬ್ಯಾಕ್ಟೀರಿಯಾ ನಿಮ್ಮ ಹಲ್ಲಿನ ಲೇಪನ ಪದರವನ್ನು ತಿಂದಿದೆ. ರಸ್ತೆ ಗುಂಡಿಯಂತೆ ಯೋಚಿಸಿ — ಈಗ ಚಿಕ್ಕದು, ನಿರ್ಲಕ್ಷಿಸಿದರೆ ದೊಡ್ಡದಾಗುತ್ತದೆ.',
+      desc:  'ಬ್ಯಾಕ್ಟೀರಿಯಾ ನಿಮ್ಮ ಹಲ್ಲಿನ ಲೇಪನ ಪದರವನ್ನು ತಿಂದಿದೆ. ಇದು ರಸ್ತೆಯ ಗುಂಡಿಯಂತೆಯೇ — ಈಗ ಚಿಕ್ಕದಾಗಿದೆ, ನಿರ್ಲಕ್ಷಿಸಿದರೆ ದೊಡ್ಡದಾಗುತ್ತದೆ.',
       action: 'ಫಿಲ್ಲಿಂಗ್ ಅಗತ್ಯ. ಒಂದೇ ಭೇಟಿಯಲ್ಲಿ ಮುಗಿಯುವ ಸರಳ ಕಾರ್ಯವಿಧಾನ.',
     },
     'Bone Loss': {
@@ -464,8 +479,8 @@ export const FINDINGS_L10N: Record<Lang, Record<ConditionKey, FindingL10n>> = {
     },
     'Impacted Wisdom Tooth': {
       icon: '😬',
-      title: 'ವಾಲಿದ ಅಕ್ಕಿಲಿ ಹಲ್ಲು',
-      desc:  'ನಿಮ್ಮ ಅಕ್ಕಿಲಿ ಹಲ್ಲು ವಾಲಿ ಬೆಳೆಯುತ್ತಿದ್ದು ಇತರ ಹಲ್ಲುಗಳ ಮೇಲೆ ಒತ್ತಡ ಹಾಕಬಹುದು.',
+      title: 'ವಾಲಿದ ಬುದ್ಧಿ ಹಲ್ಲು',
+      desc:  'ನಿಮ್ಮ ಬುದ್ಧಿ ಹಲ್ಲು ವಾಲಿ ಬೆಳೆಯುತ್ತಿದ್ದು ಇತರ ಹಲ್ಲುಗಳ ಮೇಲೆ ಒತ್ತಡ ಹಾಕಬಹುದು.',
       action: 'ತೆಗೆಯಬೇಕಾಗಬಹುದು. ತೀವ್ರತೆಯ ಆಧಾರದ ಮೇಲೆ ವೈದ್ಯರು ಸಲಹೆ ನೀಡುತ್ತಾರೆ.',
     },
     'Old Filling Failure': {

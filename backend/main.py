@@ -18,7 +18,13 @@ from supabase import create_client, Client
 from config import settings
 from llm_service import generate_report, compare_reports
 from model_service import cnn_service
+from services.second_opinion_ai import SecondOpinionAI
 from utils import process_dicom_or_image
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Initialize Services
+# ─────────────────────────────────────────────────────────────────────────────
+so_ai = SecondOpinionAI(api_key=settings.gemini_api_key)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Logging
@@ -214,6 +220,23 @@ async def compare_historical_reports(request: CompareRequest, user_id: str = Dep
         comparison = compare_reports(old_res.data['findings'], new_res.data['findings'])
         return {"comparison": comparison}
     except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/second-opinion")
+async def get_second_opinion(data: Dict[str, Any]):
+    """
+    Main endpoint for second opinion analysis.
+    Uses intelligent simulation (Model B) for efficient production verification.
+    """
+    findings = data.get("findings")
+    if not findings:
+        raise HTTPException(status_code=400, detail="Findings data is required")
+        
+    try:
+        result = await so_ai.analyze(findings)
+        return result
+    except Exception as e:
+        logger.error(f"Second Opinion API Error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/health")

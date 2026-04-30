@@ -54,7 +54,7 @@ def generate_report(payload: dict, image_bytes: bytes = None) -> dict | str:
 
         if output_mode == "treatment_plan":
             response = client.models.generate_content(
-                model='gemini-1.5-flash',
+                model='gemini-2.0-flash',
                 contents=contents,
                 config=genai.types.GenerateContentConfig(
                     response_mime_type="application/json",
@@ -63,7 +63,7 @@ def generate_report(payload: dict, image_bytes: bytes = None) -> dict | str:
             return json.loads(response.text)
         else:
             response = client.models.generate_content(
-                model='gemini-1.5-flash',
+                model='gemini-2.0-flash',
                 contents=contents,
             )
             return response.text
@@ -102,7 +102,7 @@ def compare_reports(old_findings: list, new_findings: list) -> str:
     
     try:
         response = client.models.generate_content(
-            model='gemini-2.0-flash',
+            model='gemini-1.5-flash',
             contents=prompt
         )
         return response.text

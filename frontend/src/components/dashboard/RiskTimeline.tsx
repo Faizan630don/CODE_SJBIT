@@ -142,8 +142,8 @@ export default function RiskTimeline({ result }: Props) {
 
   // Compute logic
   const computeCost = (step: number) => {
-    const base = result.treatment?.cost_estimate_inr?.low || BASE_COST;
-    if (FINDING_PROGRESSION.length === 0) return base;
+    if (FINDING_PROGRESSION.length === 0) return 0;
+    const base = result.treatment?.cost_estimate_inr?.low ?? BASE_COST;
     const s0 = Math.floor(step);
     const s1 = Math.min(s0 + 1, 2);
     const frac = step - s0;

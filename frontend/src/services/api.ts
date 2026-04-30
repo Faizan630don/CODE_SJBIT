@@ -79,6 +79,22 @@ export async function getScanResults(scanId: string): Promise<ScanResult> {
   throw new Error(`Scan ${scanId} not found in local cache.`);
 }
 
+export async function fetchSecondOpinion(findings: any[]): Promise<any> {
+  try {
+    const res = await fetch(`${BASE_URL}/api/second-opinion`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ findings }),
+    });
+
+    if (!res.ok) throw new Error(`Second opinion failed: ${res.status}`);
+    return await res.json();
+  } catch (error) {
+    console.error('Second opinion error:', error);
+    throw error;
+  }
+}
+
 /**
  * Checks if the backend inference engine is online.
  */
@@ -142,5 +158,14 @@ export function loadScanHistory(): ScanSummary[] {
   return JSON.parse(localStorage.getItem('scan_history') ?? '[]');
 }
 
-export default { analyzeScan, uploadXray, getScanResults, checkBackendHealth, saveScanToHistory, loadFullScan, loadScanHistory };
+export default { 
+  analyzeScan, 
+  uploadXray, 
+  getScanResults, 
+  fetchSecondOpinion, 
+  checkBackendHealth, 
+  saveScanToHistory, 
+  loadFullScan, 
+  loadScanHistory 
+};
 

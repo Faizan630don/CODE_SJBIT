@@ -68,7 +68,7 @@ class CNNModelService:
             image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
 
             print(f"Running inference on {image.width}x{image.height} image...")
-            results = self.model.predict(image, conf=0.25, iou=0.5, verbose=False)
+            results = self.model.predict(image, conf=0.15, iou=0.45, verbose=False)
 
             findings = []
 
@@ -83,7 +83,7 @@ class CNNModelService:
                     conf = float(box.conf[0])
 
                     # Tuning threshold for best.pt sensitivity
-                    if conf < 0.20:
+                    if conf < 0.15:
                         continue
 
                     x1, y1, x2, y2 = box.xyxy[0].tolist()

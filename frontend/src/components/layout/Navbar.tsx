@@ -41,16 +41,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-surface-border glass">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
-          <div className="w-9 h-9 rounded-xl bg-brand-600/20 border border-brand-600/30 flex items-center justify-center group-hover:bg-brand-600/30 transition-colors">
-            <Brain className="w-5 h-5 text-brand-400" />
-          </div>
-          <div className="hidden sm:block">
-            <span className="font-extrabold text-white tracking-tight leading-none text-[15px]">
-              DentalVision
-            </span>
-            <span className="text-brand-400 font-extrabold text-[15px]"> AI</span>
-          </div>
+        <Link to="/" className="flex items-center shrink-0 group py-2">
+          <img 
+            src="/dentra-logo-transparent.png" 
+            alt="Dentra Logo" 
+            className="h-7 w-auto opacity-90 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" 
+          />
         </Link>
 
         {/* Links */}
