@@ -42,10 +42,8 @@ dist/
 build/
 
 # ML Models & Large Binaries
-*.pt
 *.onnx
 *.weights
 *.bin
 *.h5
 *.pb
-/backend/best.pt
