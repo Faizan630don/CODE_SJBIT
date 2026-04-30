@@ -1,0 +1,21 @@
+# dental.yaml — YOLOv8 dataset configuration
+# Place this file in your project root or /content/ on Colab
+# Update 'path' to where your dataset lives
+
+path: /content/dental_dataset # absolute path to dataset folder
+train: images/train # relative to path
+val: images/val # relative to path
+
+# Number of classes
+nc: 8
+
+# Class names — must match exactly what your labels use
+names:
+  0: caries
+  1: periapical_lesion
+  2: bone_loss
+  3: calculus
+  4: crown
+  5: implant
+  6: missing_tooth
+  7: root_canal

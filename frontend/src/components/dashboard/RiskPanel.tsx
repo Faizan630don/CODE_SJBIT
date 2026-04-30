@@ -52,11 +52,28 @@ export default function RiskPanel({ result }: Props) {
   const cfg = RISK_CONFIG[result.risk_score];
   const RiskIcon = cfg.icon;
 
-  const untreatedWarnings = [
-    { tooth: 'Molar-26', warning: isDentist ? 'Pulp necrosis and periapical abscess within 3–6 months' : 'The tooth infection could spread to your jaw and neck — a serious health risk' },
-    { tooth: 'Premolar-14', warning: isDentist ? 'Progression to Stage III/IV periodontitis with >50% bone loss' : 'You could lose this tooth permanently within a year' },
-    { tooth: 'Incisor-11', warning: isDentist ? 'Sub-gingival fracture extension making restoration impossible' : 'The crack may split the tooth completely, requiring extraction' },
-  ];
+  // Derive untreated warnings from real findings
+  // Group by tooth to avoid duplicate warnings for the same tooth
+  const toothGroups = Object.entries(
+    result.findings.reduce((acc, f) => {
+      if (!acc[f.tooth_id]) acc[f.tooth_id] = [];
+      acc[f.tooth_id].push(f);
+      return acc;
+    }, {} as Record<string, typeof result.findings>)
+  );
+
+  const untreatedWarnings = toothGroups
+    .filter(([_, findings]) => findings.some(f => f.severity >= 3))
+    .slice(0, 3)
+    .map(([fdi, findings]) => {
+      const condition = Array.from(new Set(findings.map(f => f.condition))).join(' & ');
+      return {
+        tooth: `Tooth ${fdi}`,
+        warning: isDentist 
+          ? `Potential progression of ${condition} leading to pulp involvement or structural failure within 3-6 months.`
+          : `If left untreated, ${condition} on this tooth could lead to severe pain or tooth loss.`
+      };
+    });
 
   return (
     <div className="space-y-4">
@@ -127,8 +144,8 @@ export default function RiskPanel({ result }: Props) {
           </span>
         </div>
         <div className="space-y-2 mt-3">
-          {result.treatment.procedures.map((p) => (
-            <div key={p.name} className="flex items-center justify-between gap-3 py-1.5 border-b border-surface-border/50 last:border-0">
+          {result.treatment.procedures.map((p, i) => (
+            <div key={`${p.name}-${i}`} className="flex items-center justify-between gap-3 py-1.5 border-b border-surface-border/50 last:border-0">
               <div className="flex items-center gap-2 min-w-0">
                 <span className={`shrink-0 badge border text-[10px] ${URGENCY_STYLES[p.urgency]}`}>
                   {p.urgency}

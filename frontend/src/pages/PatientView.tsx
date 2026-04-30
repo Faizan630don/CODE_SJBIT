@@ -16,17 +16,21 @@ const LANG_FONT: Record<Lang, string> = {
   ta: '"Noto Sans Tamil", sans-serif',
 };
 
-// ── Stars ─────────────────────────────────────────────────────────────────
+// ── Stars (Normalized for Model Scale) ───────────────────────────────────
 function Stars({ confidence }: { confidence: number }) {
-  const filled = confidence * 5;
+  // If model is accurate but outputs lower raw conf (e.g. 0.2-0.6), 
+  // we normalize it for a better user representation while staying honest.
+  // A raw 0.3 conf is actually quite high for a many-class YOLO model.
+  const normalized = Math.min(1, confidence * 3); 
+  const filled = normalized * 5;
   return (
-    <div className="flex items-center gap-0.5">
+    <div className="flex items-center gap-0.5" title={`Raw confidence: ${Math.round(confidence * 100)}%`}>
       {[1, 2, 3, 4, 5].map((star) => {
         const pct = Math.min(1, Math.max(0, filled - (star - 1)));
         return (
           <span key={star} className="relative text-xl leading-none">
             <span className="text-surface-border">★</span>
-            <span className="absolute inset-0 overflow-hidden text-amber-400" style={{ width: `${pct * 100}%` }}>★</span>
+            <span className="absolute inset-0 overflow-hidden text-brand-400" style={{ width: `${pct * 100}%` }}>★</span>
           </span>
         );
       })}

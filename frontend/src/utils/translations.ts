@@ -234,59 +234,77 @@ type ConditionKey = string; // Broadened to support missing keys dynamically
 
 export const FINDINGS_L10N: Record<Lang, Record<ConditionKey, FindingL10n>> = {
   en: {
-    'Cavity': {
-      icon: '🕳️',
-      title: 'A hole in your tooth',
-      desc:  'Bacteria have eaten through your tooth enamel. Think of it like a pothole — small now, gets bigger if ignored.',
-      action: 'Needs a filling. Simple procedure, done in one visit.',
+    'Caries': {
+      icon: '🦷',
+      title: 'Cavity (Decay)',
+      desc:  'Bacteria have created a hole in your tooth enamel. If not filled soon, it can reach the nerve and cause severe pain.',
+      action: 'Requires a professional filling to stop the decay from spreading.',
     },
-    'Cavity (Dental Caries)': {
-      icon: '🕳️',
-      title: 'A hole in your tooth',
-      desc:  'Bacteria have eaten through your tooth enamel. Think of it like a pothole — small now, gets bigger if ignored.',
-      action: 'Needs a filling. Simple procedure, done in one visit.',
+    'Filling': {
+      icon: '🛠️',
+      title: 'Existing Filling',
+      desc:  'The AI detected a restoration where a previous cavity was treated. Looks stable.',
+      action: 'No immediate action needed. Continue routine monitoring.',
+    },
+    'Crown': {
+      icon: '👑',
+      title: 'Dental Crown (Cap)',
+      desc:  'A protective cap used to restore a heavily damaged or root-canaled tooth.',
+      action: 'Maintain good hygiene around the margin to prevent gum recession.',
     },
     'Bone Loss': {
       icon: '📉',
-      title: 'Your gum bone is shrinking',
-      desc:  'The bone that holds your teeth in place is slowly reducing. This is caused by gum disease.',
-      action: 'Needs a deep cleaning called scaling. Stops the shrinking.',
+      title: 'Gum Bone Recession',
+      desc:  'The bone supporting your teeth is shrinking. This is often a sign of gum disease (periodontitis).',
+      action: 'Deep cleaning (scaling) is required to stop the bone from shrinking further.',
     },
-    'Bone Loss (Periodontitis)': {
-      icon: '📉',
-      title: 'Your gum bone is shrinking',
-      desc:  'The bone that holds your teeth in place is slowly reducing. This is caused by gum disease.',
-      action: 'Needs a deep cleaning called scaling. Stops the shrinking.',
-    },
-    'Root Infection': {
-      icon: '🦠',
-      title: 'Infection at the root of a tooth',
-      desc:  'An infection has reached the root of your tooth. This can cause pain and spread if untreated.',
-      action: 'Needs a root canal treatment. Removes the infection completely.',
-    },
-    'Periapical Shadow': {
-      icon: '🔍',
-      title: 'Something to keep an eye on',
-      desc:  "The AI spotted something unusual but isn't certain. Could be nothing — needs a dentist check.",
-      action: 'Visit a dentist for a closer look.',
-    },
-    'Fractured Crown': {
-      icon: '🪨',
-      title: 'A crack in your tooth',
-      desc:  'Your tooth has a crack. Like a crack in a phone screen — needs fixing before it spreads.',
-      action: 'A crown (cap) will protect and restore the tooth.',
-    },
-    'Impacted Wisdom Tooth': {
+    'Impacted Tooth': {
       icon: '😬',
-      title: 'A wisdom tooth stuck sideways',
-      desc:  'Your wisdom tooth is growing sideways and may push against other teeth.',
-      action: 'May need removal. A dentist will advise based on severity.',
+      title: 'Impacted Tooth',
+      desc:  'A tooth that is stuck below the gum line or growing sideways, often pushing against other teeth.',
+      action: 'Consult a dentist. May require extraction if causing pain or crowding.',
     },
-    'Old Filling Failure': {
-      icon: '🔧',
-      title: 'An old filling is wearing out',
-      desc:  'A filling from a previous visit is starting to break down. Needs replacing before bacteria get in.',
-      action: 'Simple replacement filling. One visit.',
+    'Periapical Lesion': {
+      icon: '🦠',
+      title: 'Root Infection',
+      desc:  'An infection or abscess detected at the tip of the tooth root. This indicates a "dead" or infected nerve.',
+      action: 'Urgent: Usually requires Root Canal Treatment (RCT) to save the tooth.',
+    },
+    'Root Canal Treatment': {
+      icon: '🩹',
+      title: 'Root Canal Done',
+      desc:  'An existing root canal treatment was detected. The tooth has been internally cleaned and sealed.',
+      action: 'Monitor for any changes or signs of secondary infection.',
+    },
+    'Missing Teeth': {
+      icon: '⬜',
+      title: 'Missing Tooth',
+      desc:  'An empty space where a tooth should be. This can cause neighboring teeth to shift over time.',
+      action: 'Consider an implant or bridge to restore chewing function and prevent shifting.',
+    },
+    'Implant': {
+      icon: '🔩',
+      title: 'Dental Implant',
+      desc:  'An artificial titanium root placed in the jawbone to replace a missing tooth.',
+      action: 'Keep the area clean. Implants require excellent gum health to last.',
+    },
+    'Fracture Teeth': {
+      icon: '⚡',
+      title: 'Cracked/Fractured Tooth',
+      desc:  'A physical crack detected in the tooth structure. Like a cracked screen, it will spread under pressure.',
+      action: 'Needs immediate protection, usually with a crown or bonding.',
+    },
+    'Cyst': {
+      icon: '🟠',
+      title: 'Clinical Cyst',
+      desc:  'A fluid-filled sac detected in the jawbone or around a tooth root.',
+      action: 'Professional evaluation required. May need surgical drainage or removal.',
+    },
+    'Attrition': {
+      icon: '📏',
+      title: 'Tooth Wear',
+      desc:  'The top surface of your teeth is wearing down, often due to grinding (bruxism).',
+      action: 'Consider a night guard to prevent further loss of tooth height.',
     },
   },
   hi: {

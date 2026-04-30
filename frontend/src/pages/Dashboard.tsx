@@ -7,11 +7,14 @@ import {
 import { useApp } from '../context/AppContext';
 import RiskPanel from '../components/dashboard/RiskPanel';
 import RiskTimeline from '../components/dashboard/RiskTimeline';
+import NearbyClinicFinder from '../components/dashboard/NearbyClinicFinder';
+import { generateScanReport } from '../utils/reportGenerator';
+import { toast } from 'react-hot-toast';
 
 export default function Dashboard() {
   const navigate = useNavigate();
   const { scanResult, mode } = useApp();
-  const [showToast, setShowToast] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
 
   useEffect(() => {
     if (!scanResult) navigate('/');
@@ -21,10 +24,22 @@ export default function Dashboard() {
 
   const isDentist = mode === 'dentist';
 
-  const handleDownload = () => {
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 3000);
+  const handleDownload = async () => {
+    if (!scanResult) return;
+    setIsDownloading(true);
+    const loadingToast = toast.loading('Generating your professional report...');
+    
+    try {
+      await generateScanReport(scanResult, mode === 'patient');
+      toast.success('Report downloaded successfully!', { id: loadingToast });
+    } catch (err) {
+      console.error(err);
+      toast.error('Failed to generate report. Please try again.', { id: loadingToast });
+    } finally {
+      setIsDownloading(false);
+    }
   };
+
 
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-surface animate-fade-in">
@@ -58,9 +73,13 @@ export default function Dashboard() {
               <Eye className="w-3.5 h-3.5" />
               View X-ray
             </button>
-            <button onClick={handleDownload} className="btn-primary !py-1.5 !px-4 text-xs">
-              <Download className="w-3.5 h-3.5" />
-              Download Report
+            <button 
+              onClick={handleDownload} 
+              disabled={isDownloading}
+              className="btn-primary !py-1.5 !px-4 text-xs disabled:opacity-50"
+            >
+              <Download className={`w-3.5 h-3.5 ${isDownloading ? 'animate-bounce' : ''}`} />
+              {isDownloading ? 'Generating...' : 'Download Report'}
             </button>
           </div>
         </div>
@@ -124,6 +143,15 @@ export default function Dashboard() {
           {/* Left: Risk Panel */}
           <div className="space-y-5">
             <RiskPanel result={scanResult} />
+            
+            {/* Nearby Clinics */}
+            <NearbyClinicFinder 
+              condition={
+                scanResult.findings.find(f => f.severity >= 4)?.condition || 
+                scanResult.findings[0]?.condition || 
+                'Dental Checkup'
+              } 
+            />
           </div>
 
           {/* Right: Timeline + procedures */}
@@ -137,8 +165,8 @@ export default function Dashboard() {
                 <p className="section-label !mb-0">Recommended Procedures</p>
               </div>
               <div className="space-y-3">
-                {scanResult.treatment.procedures.map((p) => (
-                  <div key={p.name} className="p-3 rounded-xl bg-surface-raised border border-surface-border">
+                {scanResult.treatment.procedures.map((p, idx) => (
+                  <div key={`${p.name}-${idx}`} className="p-3 rounded-xl bg-surface-raised border border-surface-border">
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-sm font-semibold text-white">
                         {isDentist ? p.name : p.name}
@@ -175,15 +203,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Download toast */}
-      {showToast && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 animate-slide-up">
-          <div className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-surface-card border border-emerald-700/50 shadow-card">
-            <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-            <span className="text-sm font-semibold text-white">Report ready! PDF generation coming soon.</span>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

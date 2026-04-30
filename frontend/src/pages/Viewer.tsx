@@ -35,7 +35,11 @@ export default function Viewer() {
         <div className="flex items-center gap-2">
           <div className="hidden sm:flex items-center gap-4 mr-4">
             {(['High', 'Medium', 'Low'] as const).map((s) => {
-              const count = scanResult.findings.filter((f) => f.severity === s).length;
+              const count = scanResult.findings.filter((f) => {
+                if (s === 'High') return f.severity >= 4;
+                if (s === 'Medium') return f.severity === 3;
+                return f.severity <= 2;
+              }).length;
               const colors: Record<string, string> = {
                 High: 'text-red-400 bg-red-950/50 border-red-800/50',
                 Medium: 'text-amber-400 bg-amber-950/50 border-amber-800/50',
@@ -71,10 +75,8 @@ export default function Viewer() {
         {/* X-ray viewer — takes most space */}
         <div className="flex-1 min-w-0 border-r border-surface-border">
           <XrayViewer
-            imageUrl={uploadedImageUrl ?? scanResult.xray_image_url}
+            imageUrl={scanResult.xray_image_url || uploadedImageUrl}
             findings={scanResult.findings}
-            naturalWidth={scanResult.xray_dimensions.width}
-            naturalHeight={scanResult.xray_dimensions.height}
           />
         </div>
 

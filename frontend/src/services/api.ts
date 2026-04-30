@@ -1,189 +1,146 @@
-import axios from 'axios';
+/**
+ * api.ts — DentalVision AI Frontend
+ * Orchestrates real-time communication with the FastAPI backend and validates AI results.
+ */
+
+import { validateAnalysisResult, logValidationIssues } from '../utils/dataValidator';
 import type { ScanResult } from '../types';
 
-// ---------------------------------------------------------------------------
-// Axios instance — swap base URL to real API when backend is ready
-// ---------------------------------------------------------------------------
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1',
-  timeout: 30000,
-  headers: { 'Content-Type': 'application/json' },
-});
+const USE_MOCK = false; 
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
-// ---------------------------------------------------------------------------
-// Mock data
-// ---------------------------------------------------------------------------
-const MOCK_SCAN_RESULT: ScanResult = {
-  scan_id: 'scan_001',
-  scan_date: new Date().toISOString(),
-  patient_name: 'Patient Demo',
-  biological_age: 34,
-  dental_age: 41,
-  xray_image_url: '',  // always overridden by the real uploaded image URL
-  xray_dimensions: { width: 1200, height: 580 },
-  risk_score: 'High',
-  overall_health: 42,
-  findings: [
-    {
-      id: 'f1',
-      tooth_id: 'Molar-26',
-      condition: 'Cavity (Dental Caries)',
-      severity: 'High',
-      confidence: 0.87,
-      bbox: [760, 244, 58, 82],
-      explanation: 'Significant decay detected in the enamel and dentin layers of the upper-left first molar. Periapical lucency suggests possible pulp involvement.',
-      patient_explanation: 'You have a deep cavity in your upper-left back tooth. This is causing pain and needs urgent treatment to prevent infection spreading to the nerve.',
-      dentist_notes: 'Class II carious lesion extending into dentin with radiographic evidence of pulp proximity. RCT may be indicated. Recommend immediate intervention.',
-      timeline_progression: {
-        now: 'Cavity confined to dentin. Treatable with root canal or large filling.',
-        sixMonths: 'High likelihood of pulp necrosis and periapical abscess formation.',
-        oneYear: 'Probable tooth loss. Risk of spreading infection to adjacent teeth.',
-      },
-      second_opinion: 'agree',
-    },
-    {
-      id: 'f2',
-      tooth_id: 'Premolar-14',
-      condition: 'Bone Loss (Periodontitis)',
-      severity: 'Medium',
-      confidence: 0.79,
-      bbox: [430, 240, 48, 90],
-      explanation: 'Horizontal alveolar bone loss of approximately 30% detected around the upper-right first premolar, consistent with moderate periodontitis.',
-      patient_explanation: 'The bone supporting one of your upper-right teeth is shrinking due to gum disease. Without treatment, the tooth may become loose.',
-      dentist_notes: 'Horizontal bone loss ~30% of root length. Clinical probing and scaling needed. Stage II Grade B periodontitis suspected.',
-      timeline_progression: {
-        now: 'Moderate periodontitis. Manageable with deep cleaning (SRP).',
-        sixMonths: 'Bone loss may progress to 40-50% without periodontal treatment.',
-        oneYear: 'Tooth mobility and possible tooth loss. Advanced periodontitis.',
-      },
-      second_opinion: 'agree',
-    },
-    {
-      id: 'f3',
-      tooth_id: 'Incisor-11',
-      condition: 'Fractured Crown',
-      severity: 'Medium',
-      confidence: 0.73,
-      bbox: [540, 236, 48, 88],
-      explanation: 'Radiolucent line observed on the mesial aspect of the upper-right central incisor crown. Fracture line does not appear to extend to root.',
-      patient_explanation: 'Your upper front tooth has a crack in the crown. It needs to be repaired soon to prevent it from breaking further or becoming sensitive.',
-      dentist_notes: 'Crown fracture on #11, mesial aspect. No periapical pathology. Consider porcelain crown or full coverage restoration. Vitality test recommended.',
-      timeline_progression: {
-        now: 'Crown fracture only. Restorable with crown placement.',
-        sixMonths: 'Fracture may extend sub-gingivally, complicating restoration.',
-        oneYear: 'Complete fracture risk; extraction may become necessary.',
-      },
-      second_opinion: 'agree',
-    },
-    {
-      id: 'f4',
-      tooth_id: 'Molar-36',
-      condition: 'Impacted Wisdom Tooth',
-      severity: 'Low',
-      confidence: 0.91,
-      bbox: [840, 340, 72, 82],
-      explanation: 'Lower-left third molar is mesio-angularly impacted against the second molar. No signs of pericoronitis or cyst formation at this time.',
-      patient_explanation: 'Your lower-left wisdom tooth is stuck and growing sideways. It is not causing problems right now, but it should be monitored.',
-      dentist_notes: "Mesio-angular impaction #38, Winter's classification IIA. No follicular enlargement. Monitor every 6 months. Elective extraction discussable.",
-      timeline_progression: {
-        now: 'Asymptomatic impaction. Monitor with periodic X-rays.',
-        sixMonths: 'Possible development of pericoronitis or cyst formation.',
-        oneYear: 'Increased risk of infection or damage to adjacent molar #37.',
-      },
-      second_opinion: 'disagree',
-    },
-    {
-      id: 'f5',
-      tooth_id: 'Premolar-45',
-      condition: 'Old Filling Failure',
-      severity: 'Low',
-      confidence: 0.68,
-      bbox: [392, 330, 48, 80],
-      explanation: 'Existing amalgam restoration on lower-right second premolar shows marginal breakdown and possible secondary caries at the restoration margins.',
-      patient_explanation: 'An old filling in your lower-right tooth is starting to fail. The edge is breaking down, which can let bacteria in. It should be replaced soon.',
-      dentist_notes: 'Defective amalgam restoration on #45 with marginal breakdown. Secondary caries possible. Replacement with composite or onlay recommended.',
-      timeline_progression: {
-        now: 'Marginal breakdown. Replace restoration to prevent secondary decay.',
-        sixMonths: 'Secondary caries likely to develop beneath old filling.',
-        oneYear: 'Deeper decay potentially reaching pulp. Higher risk of fracture.',
-      },
-      second_opinion: 'pending',
-    },
-  ],
-  treatment: {
-    priority_list: [
-      'Root Canal Treatment — Molar-26 (Urgent)',
-      'Periodontal Scaling & Root Planing — Premolar-14',
-      'Crown Placement — Incisor-11',
-      'Filling Replacement — Premolar-45',
-      'Radiographic Monitoring — Molar-36 (Wisdom tooth)',
-    ],
-    procedures: [
-      {
-        name: 'Root Canal Treatment (RCT)',
-        tooth_id: 'Molar-26',
-        urgency: 'Immediate',
-        cost_low: 4000,
-        cost_high: 8000,
-        description: 'Endodontic therapy to remove infected pulp tissue, clean root canals, and seal with inert material. Crown placement post-RCT recommended.',
-        patient_description: 'The infected nerve of your tooth will be removed so the pain stops. The tooth is then sealed and protected with a cap.',
-      },
-      {
-        name: 'Periodontal Scaling & Root Planing',
-        tooth_id: 'Premolar-14',
-        urgency: 'Soon',
-        cost_low: 1500,
-        cost_high: 3500,
-        description: 'Deep cleaning procedure to remove subgingival calculus and biofilm. May require multiple sessions and local anesthesia.',
-        patient_description: 'A deep cleaning below the gum line to remove hardened plaque (tartar) that is causing bone loss. Usually done in 2-4 appointments.',
-      },
-      {
-        name: 'Porcelain Crown',
-        tooth_id: 'Incisor-11',
-        urgency: 'Soon',
-        cost_low: 3000,
-        cost_high: 6000,
-        description: 'Full coverage crown restoration to protect fractured tooth structure and restore aesthetics and function of the central incisor.',
-        patient_description: 'A tooth-coloured cap placed over your cracked front tooth to protect it and make it look natural again.',
-      },
-      {
-        name: 'Composite Restoration',
-        tooth_id: 'Premolar-45',
-        urgency: 'Routine',
-        cost_low: 800,
-        cost_high: 1500,
-        description: 'Removal of failed amalgam restoration and placement of tooth-colored composite resin restoration with proper bonding protocol.',
-        patient_description: 'Your old silver filling will be replaced with a new, tooth-coloured filling that looks and feels natural.',
-      },
-    ],
-    cost_estimate_inr: { low: 9300, high: 19000 },
-    patient_summary:
-      'You have 5 dental issues that need attention. The most urgent is a deep cavity in your back tooth that may be close to the nerve. Getting treatment soon will save your tooth and prevent pain from getting worse.',
-    dentist_summary:
-      'Findings indicate Stage II Grade B periodontitis, acute carious lesion with possible pulp involvement on #26, crown fracture on #11, defective restoration on #45, and asymptomatic mesio-angular impaction on #38. Immediate endodontic intervention for #26 is the clinical priority.',
-  },
-};
-
-// ---------------------------------------------------------------------------
-// Service functions — replace with real API calls when backend is ready
-// ---------------------------------------------------------------------------
+// Local cache for performance
+const resultCache: Record<string, ScanResult> = {};
 
 /**
- * Simulates uploading an X-ray file.
- * Replace with: return api.post('/scans/upload', formData)
+ * Sends an X-ray to the backend and returns the validated, high-accuracy analysis.
  */
-export const uploadXray = async (_file: File): Promise<{ scan_id: string }> => {
-  await new Promise((resolve) => setTimeout(resolve, 2800));
-  return { scan_id: 'scan_001' };
-};
+export async function analyzeScan(
+  file: File, 
+  patientInfo: { name: string; age: number; sex: string } = { name: 'Patient', age: 30, sex: 'M' }
+): Promise<ScanResult> {
+  if (USE_MOCK) {
+    throw new Error("Mock mode is disabled. Please ensure backend is running.");
+  }
+
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('patient_name', patientInfo.name);
+  formData.append('patient_age', String(patientInfo.age));
+  formData.append('patient_sex', patientInfo.sex);
+
+  try {
+    const res = await fetch(`${BASE_URL}/analyze`, {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!res.ok) {
+      const errorData = await res.json().catch(() => ({}));
+      throw new Error(errorData.detail || `Backend error: ${res.status}`);
+    }
+
+    let rawData = await res.json();
+
+    // ── CRITICAL: Validate and normalize backend data ────────────────────
+    // This ensures bounding boxes are normalized and FDI numbers are valid.
+    const validatedData = validateAnalysisResult(rawData);
+
+    // Log any validation issues for clinical auditing
+    validatedData.findings.forEach((f: any) => logValidationIssues(f));
+
+    // Store in cache
+    resultCache[validatedData.scan_id] = validatedData;
+
+    return validatedData;
+  } catch (error) {
+    console.error('API error:', error);
+    throw error;
+  }
+}
 
 /**
- * Fetches results for a given scan ID.
- * Replace with: return api.get(`/scans/${scanId}/results`)
+ * Compatibility wrapper for existing upload flows.
  */
-export const getScanResults = async (_scanId: string): Promise<ScanResult> => {
-  await new Promise((resolve) => setTimeout(resolve, 400));
-  return MOCK_SCAN_RESULT;
-};
+export async function uploadXray(
+  file: File, 
+  patientInfo?: { name: string; age: number; sex: string }
+): Promise<{ scan_id: string }> {
+  const result = await analyzeScan(file, patientInfo);
+  return { scan_id: result.scan_id };
+}
 
-export default api;
+
+/**
+ * Retrieves cached or fresh scan results.
+ */
+export async function getScanResults(scanId: string): Promise<ScanResult> {
+  if (resultCache[scanId]) return resultCache[scanId];
+  throw new Error(`Scan ${scanId} not found in local cache.`);
+}
+
+/**
+ * Checks if the backend inference engine is online.
+ */
+export async function checkBackendHealth(): Promise<boolean> {
+  try {
+    const res = await fetch(`${BASE_URL}/health`);
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+// ── PERSISTENCE (History & Comparison) ───────────────────────────────────
+
+import type { ScanSummary } from '../types';
+
+/**
+ * After every successful analysis, save to localStorage.
+ */
+export function saveScanToHistory(result: ScanResult) {
+  const history: ScanSummary[] = JSON.parse(
+    localStorage.getItem('scan_history') ?? '[]'
+  );
+  
+  const summary: ScanSummary = {
+    scan_id: result.scan_id,
+    patient_name: result.patient_name,
+    patient_age: result.biological_age,
+    scan_date: result.scan_date ?? new Date().toISOString(),
+    overall_triage: result.findings.length > 0 ? (result.findings.some(f => f.triage === 'RED') ? 'RED' : result.findings.some(f => f.triage === 'YELLOW') ? 'YELLOW' : 'GREEN') : 'GREEN',
+    finding_count: result.findings.length,
+    high_count: result.findings.filter(f => f.triage === 'RED').length,
+    medium_count: result.findings.filter(f => f.triage === 'YELLOW').length,
+    low_count: result.findings.filter(f => f.triage === 'GREEN').length,
+    conditions_preview: Array.from(new Set(result.findings.map(f => f.condition))).slice(0, 3),
+  };
+  
+  // Save summary (for history list)
+  const existing = history.findIndex(h => h.scan_id === result.scan_id);
+  if (existing >= 0) history[existing] = summary;
+  else history.unshift(summary);  // newest first
+  
+  localStorage.setItem('scan_history', JSON.stringify(history.slice(0, 20)));
+  
+  // Save full result (for comparison detail)
+  localStorage.setItem(`scan_full_${result.scan_id}`, JSON.stringify(result));
+}
+
+/**
+ * Loads full findings for a specific scan.
+ */
+export function loadFullScan(scanId: string): ScanResult | null {
+  const raw = localStorage.getItem(`scan_full_${scanId}`);
+  return raw ? JSON.parse(raw) : null;
+}
+
+/**
+ * Retrieves the summary list of all recent scans.
+ */
+export function loadScanHistory(): ScanSummary[] {
+  return JSON.parse(localStorage.getItem('scan_history') ?? '[]');
+}
+
+export default { analyzeScan, uploadXray, getScanResults, checkBackendHealth, saveScanToHistory, loadFullScan, loadScanHistory };
+

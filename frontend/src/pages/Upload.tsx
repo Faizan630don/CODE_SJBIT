@@ -2,7 +2,9 @@ import { useState, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Upload as UploadIcon, Brain, Sparkles, CheckCircle, FileImage, X } from 'lucide-react';
 import { useApp } from '../context/AppContext';
-import { uploadXray, getScanResults } from '../services/api';
+import { uploadXray, getScanResults, saveScanToHistory } from '../services/api';
+import { validateAnalysisResult } from '../utils/dataValidator';
+import { supabase } from '../services/supabase';
 
 type UploadState = 'idle' | 'dragging' | 'uploading' | 'analyzing' | 'done';
 
@@ -63,8 +65,41 @@ export default function Upload() {
         }, step.delay);
       });
 
-      const { scan_id } = await uploadXray(file);
-      const result = await getScanResults(scan_id);
+      // Fetch user info for personalized report
+      const { data: { user } } = await supabase.auth.getUser();
+      const patientInfo = user?.user_metadata ? {
+        name: user.user_metadata.full_name || 'Patient',
+        age: user.user_metadata.age || 30,
+        sex: 'M'
+      } : { name: 'Patient', age: 30, sex: 'M' };
+
+      const { scan_id } = await uploadXray(file, patientInfo);
+      const rawResult = await getScanResults(scan_id);
+      
+      // Validate and normalize backend data for high-accuracy rendering
+      const result = validateAnalysisResult(rawResult);
+
+      // Persist locally for comparison history
+      saveScanToHistory(result);
+
+      // Save report to history if user is logged in
+      const token = localStorage.getItem('supabase_token');
+      if (token) {
+        try {
+          await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/save-report`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(result)
+          });
+          console.log("✓ Report saved to history");
+        } catch (err) {
+          console.warn("Could not save report to history:", err);
+        }
+      }
+
       setProgress(100);
       setState('done');
       setScanResult(result);
@@ -233,33 +268,70 @@ export default function Upload() {
               Analyze X-ray with AI
             </button>
             <button
-              onClick={() => {
-                // Demo mode: skip file requirement
-                setState('uploading');
-                setProgress(0);
-                setCurrentStep(0);
-                const demoFile = new File(['demo'], 'demo_xray.jpg', { type: 'image/jpeg' });
-                setFile(demoFile);
-                setUploadedFile(demoFile);
+              onClick={async () => {
+                try {
+                  setState('uploading');
+                  setProgress(0);
+                  setCurrentStep(0);
+                  
+                  // Fetch the real demo image from public folder
+                  const response = await fetch('/xray.svg');
+                  const blob = await response.blob();
+                  const demoFile = new File([blob], 'demo_xray.svg', { type: 'image/svg+xml' });
+                  
+                  setFile(demoFile);
+                  setUploadedFile(demoFile);
 
-                ANALYSIS_STEPS.forEach((step, i) => {
-                  setTimeout(() => {
-                    setCurrentStep(i);
-                    setProgress(Math.round(((i + 1) / ANALYSIS_STEPS.length) * 100));
-                    if (i === 1) setState('analyzing');
-                  }, step.delay);
-                });
-
-              import('../services/api').then(({ uploadXray, getScanResults }) => {
-                  uploadXray(demoFile).then(({ scan_id }) => getScanResults(scan_id)).then((result) => {
-                    setProgress(100);
-                    setState('done');
-                    setScanResult(result);
-                    // No real image in demo mode — clear so viewer shows placeholder
-                    setUploadedImageUrl('/xray.svg');
-                    setTimeout(() => navigate('/viewer'), 500);
+                  // Animate steps
+                  ANALYSIS_STEPS.forEach((step, i) => {
+                    setTimeout(() => {
+                      setCurrentStep(i);
+                      setProgress(Math.round(((i + 1) / ANALYSIS_STEPS.length) * 100));
+                      if (i === 1) setState('analyzing');
+                    }, step.delay);
                   });
-                });
+
+                  // Fetch user info for demo report
+                  const { data: { user } } = await supabase.auth.getUser();
+                  const patientInfo = user?.user_metadata ? {
+                    name: user.user_metadata.full_name || 'Patient',
+                    age: user.user_metadata.age || 34,
+                    sex: 'M'
+                  } : { name: 'Patient', age: 34, sex: 'M' };
+
+                  const { scan_id } = await uploadXray(demoFile, patientInfo);
+                  const rawResult = await getScanResults(scan_id);
+                  const result = validateAnalysisResult(rawResult);
+                  
+                  // Persist locally for comparison history
+                  saveScanToHistory(result);
+                  
+                  // Save demo to history if user is logged in
+                  const token = localStorage.getItem('supabase_token');
+                  if (token) {
+                    try {
+                      await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/save-report`, {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json',
+                          'Authorization': `Bearer ${token}`
+                        },
+                        body: JSON.stringify(result)
+                      });
+                    } catch (e) {}
+                  }
+
+                  setProgress(100);
+                  setState('done');
+                  setScanResult(result);
+                  setUploadedImageUrl('/xray.svg');
+                  
+                  setTimeout(() => navigate('/viewer'), 500);
+                } catch (err) {
+                  console.error("Demo failed:", err);
+                  setError("Demo analysis failed. Please try a manual upload.");
+                  setState('idle');
+                }
               }}
               className="btn-secondary text-sm"
             >
