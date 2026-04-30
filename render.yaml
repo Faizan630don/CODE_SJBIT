@@ -16,18 +16,3 @@ services:
       - key: ANTHROPIC_API_KEY
         sync: false
     autoDeploy: false
-
-  - type: web
-    name: dentalvision-frontend
-    env: static
-    region: oregon
-    rootDir: frontend
-    buildCommand: "npm install && npm run build"
-    staticPublishPath: dist
-    envVars:
-      - key: VITE_API_URL
-        fromService:
-          type: web
-          name: dentalvision-backend
-          envVarKey: RENDER_EXTERNAL_URL
-    autoDeploy: false
