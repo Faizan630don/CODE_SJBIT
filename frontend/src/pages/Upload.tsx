@@ -5,6 +5,7 @@ import { useApp } from '../context/AppContext';
 import { uploadXray, getScanResults, saveScanToHistory } from '../services/api';
 import { validateAnalysisResult } from '../utils/dataValidator';
 import { supabase } from '../services/supabase';
+import Hero3D from '../components/layout/Hero3D';
 
 type UploadState = 'idle' | 'dragging' | 'uploading' | 'analyzing' | 'done';
 
@@ -118,8 +119,9 @@ export default function Upload() {
   const isLoading = state === 'uploading' || state === 'analyzing';
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center p-6">
-      <div className="w-full max-w-2xl animate-slide-up">
+    <div className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center p-6 overflow-hidden">
+      <Hero3D />
+      <div className="w-full max-w-2xl animate-slide-up relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-600/10 border border-brand-600/20 text-brand-300 text-xs font-semibold mb-5">
@@ -266,77 +268,6 @@ export default function Upload() {
             >
               <Brain className="w-5 h-5" />
               Analyze X-ray with AI
-            </button>
-            <button
-              onClick={async () => {
-                try {
-                  setState('uploading');
-                  setProgress(0);
-                  setCurrentStep(0);
-                  
-                  // Fetch the real demo image from public folder
-                  const response = await fetch('/xray.svg');
-                  const blob = await response.blob();
-                  const demoFile = new File([blob], 'demo_xray.svg', { type: 'image/svg+xml' });
-                  
-                  setFile(demoFile);
-                  setUploadedFile(demoFile);
-
-                  // Animate steps
-                  ANALYSIS_STEPS.forEach((step, i) => {
-                    setTimeout(() => {
-                      setCurrentStep(i);
-                      setProgress(Math.round(((i + 1) / ANALYSIS_STEPS.length) * 100));
-                      if (i === 1) setState('analyzing');
-                    }, step.delay);
-                  });
-
-                  // Fetch user info for demo report
-                  const { data: { user } } = await supabase.auth.getUser();
-                  const patientInfo = user?.user_metadata ? {
-                    name: user.user_metadata.full_name || 'Patient',
-                    age: user.user_metadata.age || 34,
-                    sex: 'M'
-                  } : { name: 'Patient', age: 34, sex: 'M' };
-
-                  const { scan_id } = await uploadXray(demoFile, patientInfo);
-                  const rawResult = await getScanResults(scan_id);
-                  const result = validateAnalysisResult(rawResult);
-                  
-                  // Persist locally for comparison history
-                  saveScanToHistory(result);
-                  
-                  // Save demo to history if user is logged in
-                  const token = localStorage.getItem('supabase_token');
-                  if (token) {
-                    try {
-                      await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/save-report`, {
-                        method: 'POST',
-                        headers: {
-                          'Content-Type': 'application/json',
-                          'Authorization': `Bearer ${token}`
-                        },
-                        body: JSON.stringify(result)
-                      });
-                    } catch (e) {}
-                  }
-
-                  setProgress(100);
-                  setState('done');
-                  setScanResult(result);
-                  setUploadedImageUrl('/xray.svg');
-                  
-                  setTimeout(() => navigate('/viewer'), 500);
-                } catch (err) {
-                  console.error("Demo failed:", err);
-                  setError("Demo analysis failed. Please try a manual upload.");
-                  setState('idle');
-                }
-              }}
-              className="btn-secondary text-sm"
-            >
-              <Sparkles className="w-4 h-4" />
-              Try Demo X-ray
             </button>
             <p className="text-xs text-gray-600 text-center max-w-sm">
               Your X-ray is processed securely. No data is stored permanently.

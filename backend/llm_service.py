@@ -1,12 +1,12 @@
 import json
 import os
 import logging
-from google import genai
-from google.genai import types
+from groq import Groq
+from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
 from config import settings
 
 logger = logging.getLogger(__name__)
-client = genai.Client(api_key=settings.gemini_api_key)
+client = Groq(api_key=settings.groq_api_key)
 
 def load_prompt() -> str:
     # Look for the prompt file in the current directory (backend/)
@@ -18,10 +18,28 @@ def load_prompt() -> str:
         logger.warning(f"Prompt file not found at {prompt_path}. Using fallback.")
         return "You are a world-class dental AI assistant. Analyze the provided findings and provide a professional clinical report."
 
+@retry(
+    wait=wait_exponential(multiplier=1, min=2, max=10),
+    stop=stop_after_attempt(4),
+    retry=retry_if_exception_type(Exception),
+    reraise=True
+)
+def _call_groq(model: str, messages: list, response_format=None):
+    if response_format:
+        return client.chat.completions.create(
+            model=model,
+            messages=messages,
+            response_format=response_format
+        )
+    return client.chat.completions.create(
+        model=model,
+        messages=messages
+    )
+
 def generate_report(payload: dict, image_bytes: bytes = None) -> dict | str:
     """
-    Generates a dental report using Gemini 2.0 Flash.
-    Now supports Multimodal Vision for 'Perfect Framing' validation.
+    Generates a dental report using Groq llama-3.3-70b-versatile.
+    Note: Image bytes are ignored as the versatile model is text-only.
     """
     prompt_context = load_prompt()
     output_mode = payload.get("output_mode", "patient_report")
@@ -30,7 +48,6 @@ def generate_report(payload: dict, image_bytes: bytes = None) -> dict | str:
     if not findings:
         return "Your dental scan looks healthy! No significant issues were detected."
 
-    # Construct the Multimodal Prompt
     prompt = f"""
     {prompt_context}
     
@@ -38,50 +55,64 @@ def generate_report(payload: dict, image_bytes: bytes = None) -> dict | str:
     {json.dumps(payload, indent=2)}
     
     INSTRUCTIONS:
-    - Base your analysis on the detections provided AND the visual evidence in the image.
-    - APPLY 'PERFECT FRAMING' CONSTRAINTS:
-        1. Zero-G Correction: Ensure findings are anchored to tooth structure, not jawbone.
-        2. Anatomical Tightness: Follow the periodontal ligament space as the boundary.
-        3. Mass-Center Validation: Cross-reference YOLO boxes with the actual tooth centers.
-    - If a detection looks 'floating' or 'bleeding' into adjacent teeth, flag it in the dentist notes.
+    - Base your analysis on the detections provided.
+    - If outputting JSON, ensure the root structure matches exactly what is required.
     """
     
     try:
-        contents = [prompt]
-        if image_bytes:
-            # Add image to multimodal request
-            contents.append(types.Part.from_bytes(data=image_bytes, mime_type="image/jpeg"))
+        system_content = "You are an expert AI dental diagnostic assistant. ALWAYS output valid JSON if requested."
+        if output_mode == "treatment_plan":
+            system_content += """
+            Ensure your JSON perfectly matches this schema:
+            {
+              "priority_list": ["list of strings"],
+              "procedures": [
+                {
+                  "name": "Procedure Name",
+                  "tooth_id": "Tooth Number",
+                  "urgency": "Immediate/Soon/Routine",
+                  "cost_low": 1000,
+                  "cost_high": 5000,
+                  "description": "Clinical description",
+                  "patient_description": "Simple patient-friendly description"
+                }
+              ],
+              "cost_estimate_inr": {"low": 1000, "high": 5000},
+              "patient_summary": "Summary string",
+              "dentist_summary": "Summary string"
+            }
+            """
+        
+        messages = [
+            {"role": "system", "content": system_content},
+            {"role": "user", "content": prompt}
+        ]
 
         if output_mode == "treatment_plan":
-            response = client.models.generate_content(
-                model='gemini-2.0-flash',
-                contents=contents,
-                config=genai.types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                )
+            response = _call_groq(
+                model='llama-3.3-70b-versatile', 
+                messages=messages, 
+                response_format={"type": "json_object"}
             )
-            return json.loads(response.text)
+            return json.loads(response.choices[0].message.content)
         else:
-            response = client.models.generate_content(
-                model='gemini-2.0-flash',
-                contents=contents,
-            )
-            return response.text
+            response = _call_groq(model='llama-3.3-70b-versatile', messages=messages)
+            return response.choices[0].message.content
             
     except Exception as e:
-        logger.error(f"Gemini API Error: {e}")
+        logger.error(f"Groq API Error after retries: {e}")
         if output_mode == "treatment_plan":
             return {
                 "priority_list": [f"Review {len(findings)} detected conditions"],
                 "procedures": [],
                 "cost_estimate_inr": {"low": 0, "high": 0},
-                "patient_summary": "The AI has identified several areas of concern in your scan. While a detailed written report is currently being generated, please review the visual markers on your X-ray for immediate findings.",
-                "dentist_summary": "Inference complete. High-accuracy detections are available in the viewer. LLM-based secondary descriptive report generation is currently queued."
+                "patient_summary": "The AI has identified several areas of concern in your scan. Detailed descriptive report generation is queued.",
+                "dentist_summary": "Inference complete. High-accuracy detections are available in the viewer."
             }
-        return "Clinical analysis complete. The AI has mapped several key findings on your X-ray. Please consult the 'Findings' tab for detailed tooth-by-tooth information while the professional summary is being finalized."
+        return "Clinical analysis complete. The AI has mapped several key findings on your X-ray. Please consult the 'Findings' tab for detailed information."
 
 def compare_reports(old_findings: list, new_findings: list) -> str:
-    """Uses Gemini to compare two sets of real dental findings and summarize changes."""
+    """Uses Groq to compare two sets of real dental findings and summarize changes."""
     if not old_findings or not new_findings:
         return "Insufficient data to perform a historical comparison."
 
@@ -101,11 +132,12 @@ def compare_reports(old_findings: list, new_findings: list) -> str:
     """
     
     try:
-        response = client.models.generate_content(
-            model='gemini-1.5-flash',
-            contents=prompt
-        )
-        return response.text
+        messages = [
+            {"role": "system", "content": "You are a senior dental consultant."},
+            {"role": "user", "content": prompt}
+        ]
+        response = _call_groq(model='llama-3.3-70b-versatile', messages=messages)
+        return response.choices[0].message.content
     except Exception as e:
         logger.error(f"Error comparing reports: {e}")
         return "Unable to generate a historical comparison summary at this time."

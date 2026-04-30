@@ -11,6 +11,8 @@ import NearbyClinicFinder from '../components/dashboard/NearbyClinicFinder';
 import { generateScanReport } from '../utils/reportGenerator';
 import { toast } from 'react-hot-toast';
 
+import NeuralNetwork3D from '../components/layout/NeuralNetwork3D';
+
 export default function Dashboard() {
   const navigate = useNavigate();
   const { scanResult, mode } = useApp();
@@ -42,8 +44,10 @@ export default function Dashboard() {
 
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-surface animate-fade-in">
-      {/* Header */}
+    <div className="relative min-h-[calc(100vh-4rem)] bg-surface/90 animate-fade-in overflow-hidden">
+      <NeuralNetwork3D />
+      <div className="relative z-10">
+        {/* Header */}
       <div className="border-b border-surface-border bg-surface-card sticky top-16 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -203,6 +207,7 @@ export default function Dashboard() {
         </div>
       </div>
 
+      </div>
     </div>
   );
 }

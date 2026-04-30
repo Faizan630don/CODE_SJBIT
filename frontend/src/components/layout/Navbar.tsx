@@ -42,10 +42,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
         {/* Brand */}
         <Link to="/" className="flex items-center shrink-0 group py-2">
-          <img 
-            src="/dentra-logo-transparent.png" 
-            alt="Dentra Logo" 
-            className="h-7 w-auto opacity-90 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" 
+          <img
+            src="/dentra-logo-transparent.png"
+            alt="Dentra Logo"
+            className="h-7 w-auto opacity-90 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
           />
         </Link>
 

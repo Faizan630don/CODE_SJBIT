@@ -24,7 +24,7 @@ from utils import process_dicom_or_image
 # ─────────────────────────────────────────────────────────────────────────────
 # Initialize Services
 # ─────────────────────────────────────────────────────────────────────────────
-so_ai = SecondOpinionAI(api_key=settings.gemini_api_key)
+so_ai = SecondOpinionAI(api_key=settings.groq_api_key)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Logging
@@ -158,6 +158,18 @@ async def analyze_xray(
             "patient_summary": summary_text,
             "dentist_summary": "Analysis complete."
         }
+        
+        try:
+            valid_treatment = TreatmentPlan(**treatment)
+        except Exception as e:
+            logger.error(f"TreatmentPlan Validation Error: {e}")
+            valid_treatment = TreatmentPlan(
+                priority_list=[f"Review {len(findings)} detected conditions"],
+                procedures=[],
+                cost_estimate_inr={"low": 0, "high": 0},
+                patient_summary="The AI has identified several areas of concern. Detailed descriptive report generation failed schema validation.",
+                dentist_summary="Inference complete. High-accuracy detections are available in the viewer."
+            )
 
         return AnalysisResponse(
             scan_id=str(uuid.uuid4()),
@@ -168,7 +180,7 @@ async def analyze_xray(
             findings=findings,
             risk_score=overall_triage.replace("RED", "High").replace("YELLOW", "Medium").replace("GREEN", "Low"),
             overall_health=overall_health,
-            treatment=TreatmentPlan(**treatment),
+            treatment=valid_treatment,
             xray_image_url=f"data:image/jpeg;base64,{processed_image_b64}"
         )
         

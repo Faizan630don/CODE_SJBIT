@@ -3,7 +3,7 @@ import json
 import random
 import logging
 import asyncio
-from google import genai
+from groq import Groq
 from typing import Dict, List, Any, Optional
 
 # Setup logging
@@ -26,8 +26,8 @@ DISAGREEMENT_PROBABILITY = {
 
 class SecondOpinionAI:
     def __init__(self, api_key: str = None):
-        key = api_key or os.getenv("GEMINI_API_KEY")
-        self.client = genai.Client(api_key=key)
+        key = api_key or os.getenv("GROQ_API_KEY")
+        self.client = Groq(api_key=key) if key else None
 
 
     async def analyze(self, findings_input: Dict[str, Any], image_bytes: Optional[bytes] = None) -> Dict[str, Any]:

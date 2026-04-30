@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "@supabase/supabase-js": "^2.105.1",
     "@types/leaflet": "^1.9.21",
     "axios": "^1.15.2",
@@ -20,7 +22,8 @@
     "react-dom": "^19.2.5",
     "react-hot-toast": "^2.6.0",
     "react-leaflet": "^5.0.0",
-    "react-router-dom": "^7.14.2"
+    "react-router-dom": "^7.14.2",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

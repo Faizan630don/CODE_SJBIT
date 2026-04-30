@@ -265,25 +265,25 @@ OUTPUT REQUIREMENT:
 OUTPUT FORMAT:
 {
   "priority_list": [
-    {
-      "tooth":     "string  — tooth ID as provided in input",
-      "condition": "string  — plain-English condition name",
-      "urgency":   "High | Medium | Low | Needs Clinical Verification"
-    }
+    "string — list of priorities like 'High priority: Cavity on Tooth 14'"
   ],
   "procedures": [
     {
-      "condition":   "string — condition name",
-      "recommended": "string — primary recommended procedure",
-      "alternative": "string — clinically acceptable alternative"
+      "name": "Procedure Name",
+      "tooth_id": "Tooth Number",
+      "urgency": "Immediate | Soon | Routine",
+      "cost_low": 1000,
+      "cost_high": 5000,
+      "description": "Clinical description",
+      "patient_description": "Simple patient-friendly description"
     }
   ],
   "cost_estimate_inr": {
     "low":  integer,
     "high": integer
   },
-  "if_untreated":    "string — concise clinical consequence of ignoring high-priority findings",
-  "patient_summary": "string — empathetic, plain-English summary addressed directly to the patient"
+  "patient_summary": "string — empathetic, plain-English summary addressed directly to the patient",
+  "dentist_summary": "string — summary for the dentist"
 }
 
 RULES & EDGE CASES:
