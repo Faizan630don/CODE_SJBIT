@@ -87,3 +87,4 @@ Pillow
 torch
 torchvision
 ultralytics
+groq
