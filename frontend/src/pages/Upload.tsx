@@ -121,7 +121,7 @@ export default function Upload() {
   return (
     <div className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center p-6 overflow-hidden">
       <Hero3D />
-      <div className="w-full max-w-2xl animate-slide-up relative z-10">
+      <div className="w-full max-w-xl animate-slide-up relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-600/10 border border-brand-600/20 text-brand-300 text-xs font-semibold mb-5">
@@ -186,9 +186,9 @@ export default function Upload() {
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center py-20 px-6">
-                <div className="w-20 h-20 rounded-2xl bg-brand-600/10 border border-brand-600/20 flex items-center justify-center mb-5">
-                  <UploadIcon className="w-9 h-9 text-brand-400" />
+              <div className="flex flex-col items-center justify-center py-14 px-6">
+                <div className="w-16 h-16 rounded-2xl bg-brand-600/10 border border-brand-600/20 flex items-center justify-center mb-5">
+                  <UploadIcon className="w-8 h-8 text-brand-400" />
                 </div>
                 <p className="text-white font-semibold text-lg mb-1">Drop your X-ray here</p>
                 <p className="text-gray-500 text-sm mb-4">or click to browse files</p>

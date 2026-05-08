@@ -52,15 +52,17 @@ const ARCH_TEETH_DATA = [
 // Color interpolation helpers
 function lerp(a: number, b: number, t: number) { return Math.round(a + (b - a) * t); }
 function hexToRgb(hex: string) {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
+  if (!hex || typeof hex !== 'string') return { r: 0, g: 0, b: 0 };
+  const r = parseInt(hex.slice(1, 3), 16) || 0;
+  const g = parseInt(hex.slice(3, 5), 16) || 0;
+  const b = parseInt(hex.slice(5, 7), 16) || 0;
   return { r, g, b };
 }
 function lerpColor(c1: string, c2: string, t: number) {
   const a = hexToRgb(c1);
   const b = hexToRgb(c2);
-  return `rgb(${lerp(a.r, b.r, t)},${lerp(a.g, b.g, t)},${lerp(a.b, b.b, t)})`;
+  const safeT = Math.max(0, Math.min(1, t));
+  return `rgb(${lerp(a.r, b.r, safeT)},${lerp(a.g, b.g, safeT)},${lerp(a.b, b.b, safeT)})`;
 }
 
 function useAnimatedValue(target: number, duration = 600) {
@@ -144,9 +146,9 @@ export default function RiskTimeline({ result }: Props) {
   const computeCost = (step: number) => {
     if (FINDING_PROGRESSION.length === 0) return 0;
     const base = result.treatment?.cost_estimate_inr?.low ?? BASE_COST;
-    const s0 = Math.floor(step);
+    const s0 = Math.max(0, Math.min(Math.floor(step), 2));
     const s1 = Math.min(s0 + 1, 2);
-    const frac = step - s0;
+    const frac = Math.max(0, Math.min(step - s0, 1));
     let totalMult = 0;
     FINDING_PROGRESSION.forEach(fp => {
       totalMult += fp.costMultiplier[s0] + (fp.costMultiplier[s1] - fp.costMultiplier[s0]) * frac;
@@ -159,16 +161,16 @@ export default function RiskTimeline({ result }: Props) {
   const getToothColor = (findingId: string) => {
     const fp = FINDING_PROGRESSION.find(f => f.id === findingId);
     if (!fp) return '#2a2820';
-    const s0 = Math.floor(animStep);
+    const s0 = Math.max(0, Math.min(Math.floor(animStep), 2));
     const s1 = Math.min(s0 + 1, 2);
-    const frac = animStep - s0;
+    const frac = Math.max(0, Math.min(animStep - s0, 1));
     return lerpColor(fp.colors[s0], fp.colors[s1], frac);
   };
 
   const getScore = (fp: typeof FINDING_PROGRESSION[0]) => {
-    const s0 = Math.floor(animStep);
+    const s0 = Math.max(0, Math.min(Math.floor(animStep), 2));
     const s1 = Math.min(s0 + 1, 2);
-    const frac = animStep - s0;
+    const frac = Math.max(0, Math.min(animStep - s0, 1));
     return Math.round(fp.scores[s0] + (fp.scores[s1] - fp.scores[s0]) * frac);
   };
 
@@ -182,7 +184,7 @@ export default function RiskTimeline({ result }: Props) {
 
   return (
     <div className="card p-5 space-y-5">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <Clock className="w-4 h-4 text-brand-400" />
           <div>
@@ -190,6 +192,23 @@ export default function RiskTimeline({ result }: Props) {
             <p className="text-[11px] text-gray-500">Projected clinical deterioration</p>
           </div>
         </div>
+        
+        <div className="flex bg-black/40 p-1 rounded-lg border border-white/5">
+          {TIME_LABELS.map((label, idx) => (
+            <button
+              key={label}
+              onClick={() => setRawStep(idx)}
+              className={`px-3 py-1.5 rounded-md text-[10px] font-bold transition-all duration-200 ${
+                rawStep === idx 
+                  ? 'bg-brand-600 text-white shadow-glow' 
+                  : 'text-gray-500 hover:text-gray-300'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
         <div className="text-right">
           <p className="text-[10px] text-gray-500 uppercase flex items-center gap-1 justify-end">
             <DollarSign className="w-3 h-3" /> Est. Cost

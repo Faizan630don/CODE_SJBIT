@@ -5,6 +5,7 @@ import * as THREE from 'three';
 function Network() {
   const pointsRef = useRef<THREE.Points>(null!);
   const linesRef = useRef<THREE.LineSegments>(null!);
+  const groupRef = useRef<THREE.Group>(null!);
 
   const particleCount = 100;
   const maxDistance = 1.2;
@@ -23,24 +24,24 @@ function Network() {
   }, []);
 
   useFrame((state, delta) => {
-    if (!pointsRef.current || !linesRef.current) return;
+    if (!pointsRef.current || !linesRef.current || !groupRef.current) return;
     
-    // Slowly rotate the entire network
-    pointsRef.current.rotation.y += delta * 0.05;
-    linesRef.current.rotation.y += delta * 0.05;
-    pointsRef.current.rotation.x += delta * 0.02;
-    linesRef.current.rotation.x += delta * 0.02;
+    // Smoothly follow the mouse cursor
+    const mouseX = state.mouse.x * 2;
+    const mouseY = state.mouse.y * 2;
+    
+    groupRef.current.position.x += (mouseX - groupRef.current.position.x) * 0.05;
+    groupRef.current.position.y += (mouseY - groupRef.current.position.y) * 0.05;
+    
+    // Rotate slightly based on mouse
+    groupRef.current.rotation.y += delta * 0.05 + (mouseX * 0.01);
+    groupRef.current.rotation.x += delta * 0.02 - (mouseY * 0.01);
 
     let vertexpos = 0;
     let colorpos = 0;
     let numConnected = 0;
 
     const positionsArray = pointsRef.current.geometry.attributes.position.array as Float32Array;
-
-    // Optional: slowly move particles
-    for (let i = 0; i < particleCount; i++) {
-      // We could add simple drifting here, but rotation is enough for a smooth effect
-    }
 
     for (let i = 0; i < particleCount; i++) {
       for (let j = i + 1; j < particleCount; j++) {
@@ -60,15 +61,14 @@ function Network() {
           positions[vertexpos++] = positionsArray[j * 3 + 1];
           positions[vertexpos++] = positionsArray[j * 3 + 2];
 
-          // Use a brand-matching color (brand-500 is roughly #8b5cf6, purple)
-          // We will use 139, 92, 246 rgb values mapped to 0-1
-          colors[colorpos++] = 0.55 * alpha;
-          colors[colorpos++] = 0.36 * alpha;
-          colors[colorpos++] = 0.96 * alpha;
+          // Use white color as requested
+          colors[colorpos++] = alpha;
+          colors[colorpos++] = alpha;
+          colors[colorpos++] = alpha;
 
-          colors[colorpos++] = 0.55 * alpha;
-          colors[colorpos++] = 0.36 * alpha;
-          colors[colorpos++] = 0.96 * alpha;
+          colors[colorpos++] = alpha;
+          colors[colorpos++] = alpha;
+          colors[colorpos++] = alpha;
 
           numConnected++;
         }
@@ -81,7 +81,7 @@ function Network() {
   });
 
   return (
-    <group>
+    <group ref={groupRef}>
       <points ref={pointsRef}>
         <bufferGeometry>
           <bufferAttribute
@@ -92,8 +92,8 @@ function Network() {
           />
         </bufferGeometry>
         <pointsMaterial
-          size={0.05}
-          color="#a78bfa"
+          size={0.06}
+          color="#ffffff"
           transparent
           opacity={0.8}
           sizeAttenuation
@@ -117,7 +117,7 @@ function Network() {
         <lineBasicMaterial
           vertexColors
           transparent
-          opacity={0.4}
+          opacity={0.3}
           blending={THREE.AdditiveBlending}
         />
       </lineSegments>
@@ -127,9 +127,9 @@ function Network() {
 
 export default function NeuralNetwork3D() {
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none opacity-40">
+    <div className="fixed inset-0 z-0 pointer-events-none opacity-50 bg-[#020617]">
       <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
-        <fog attach="fog" args={['#0f172a', 2, 10]} />
+        <fog attach="fog" args={['#020617', 2, 10]} />
         <Network />
       </Canvas>
     </div>

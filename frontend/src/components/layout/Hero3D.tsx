@@ -25,21 +25,33 @@ function randomInSphere(numPoints: number, radius: number) {
 
 function ParticleSwarm() {
   const ref = useRef<THREE.Points>(null!);
+  const groupRef = useRef<THREE.Group>(null!);
   const sphere = useMemo(() => randomInSphere(3000, 1.5), []);
 
   useFrame((state, delta) => {
-    if (ref.current) {
+    if (ref.current && groupRef.current) {
+      // Rotate slowly
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;
+
+      // Mouse tracking
+      const mouseX = state.mouse.x * 0.5;
+      const mouseY = state.mouse.y * 0.5;
+      
+      groupRef.current.position.x += (mouseX - groupRef.current.position.x) * 0.05;
+      groupRef.current.position.y += (mouseY - groupRef.current.position.y) * 0.05;
+      
+      groupRef.current.rotation.x += (mouseY - groupRef.current.rotation.x) * 0.02;
+      groupRef.current.rotation.y += (mouseX - groupRef.current.rotation.y) * 0.02;
     }
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
+    <group ref={groupRef} rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent
-          color="#8b5cf6"
+          color="#ffffff"
           size={0.015}
           sizeAttenuation={true}
           depthWrite={false}
