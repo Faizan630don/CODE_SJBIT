@@ -17,15 +17,17 @@ export const DEMO_SCAN: ScanResult = {
 
   findings: [
     {
+      // FDI #14 = upper right 1st premolar → IMAGE LEFT side (patient right), upper jaw
+      // Visible as a distinct premolar ~35% from the left edge of the image
       id: 'det_0_0',
       tooth_id: '14',
       condition: 'Caries',
       severity: 4,
       confidence: 0.91,
       triage: 'RED',
-      bbox: { x: 0.38, y: 0.22, width: 0.06, height: 0.08 },
+      bbox: { x: 0.335, y: 0.385, width: 0.055, height: 0.095 },
       explanation: 'Active dental caries detected on the occlusal surface of tooth #14. High confidence detection indicating significant enamel and possible dentin involvement.',
-      patient_explanation: 'A cavity was found on your upper left molar (#14). This needs prompt treatment to prevent it from reaching the nerve.',
+      patient_explanation: 'A cavity was found on your upper right first premolar (#14). This needs prompt treatment to prevent it from reaching the nerve.',
       dentist_notes: 'Deep occlusal caries approaching pulp. Consider indirect pulp cap vs. RCT depending on vitality test. ICD-10: K02.51.',
       timeline_progression: {
         now: 'Active caries — enamel/dentin involved.',
@@ -36,13 +38,15 @@ export const DEMO_SCAN: ScanResult = {
       icdas_code: 'ICDAS 4',
     },
     {
+      // FDI #36 = lower left 1st molar → IMAGE RIGHT side (patient left), lower jaw
+      // Visible as a large molar ~65-72% from left in the lower arch
       id: 'det_1_1',
       tooth_id: '36',
       condition: 'Periapical Lesion',
       severity: 5,
       confidence: 0.87,
       triage: 'RED',
-      bbox: { x: 0.28, y: 0.68, width: 0.07, height: 0.09 },
+      bbox: { x: 0.622, y: 0.575, width: 0.072, height: 0.105 },
       explanation: 'Periapical radiolucency observed at the apex of tooth #36, indicating chronic periapical periodontitis.',
       patient_explanation: 'There is an infection at the tip of the root of your lower left molar (#36). This can cause significant pain and needs urgent attention.',
       dentist_notes: 'Well-defined periapical lucency ~4mm diameter. Non-vital tooth likely. CBCT recommended. RCT or apicoectomy indicated.',
@@ -55,15 +59,17 @@ export const DEMO_SCAN: ScanResult = {
       icdas_code: 'N/A',
     },
     {
+      // FDI #11 = upper right central incisor → slightly left of center in IMAGE (x ≈ 0.45-0.50)
+      // Bone loss is visible as reduced bone height at the alveolar crest
       id: 'det_2_2',
       tooth_id: '11',
       condition: 'Bone Loss',
       severity: 4,
       confidence: 0.82,
       triage: 'RED',
-      bbox: { x: 0.49, y: 0.15, width: 0.05, height: 0.07 },
-      explanation: 'Horizontal alveolar bone loss detected across the anterior maxilla. Suggests moderate periodontal disease.',
-      patient_explanation: 'The bone supporting your upper front teeth (#11) has receded. This is an early sign of gum disease.',
+      bbox: { x: 0.44, y: 0.37, width: 0.05, height: 0.10 },
+      explanation: 'Horizontal alveolar bone loss detected at the anterior maxilla. Suggests moderate periodontal disease.',
+      patient_explanation: 'The bone supporting your upper front teeth has receded. This is an early sign of gum disease.',
       dentist_notes: 'Approximately 30–40% horizontal bone loss. Stage II/Grade B periodontitis. SRP recommended, re-eval in 6w.',
       timeline_progression: {
         now: 'Moderate bone loss — active periodontitis.',
@@ -73,13 +79,15 @@ export const DEMO_SCAN: ScanResult = {
       clinical_name: 'Alveolar Bone Loss',
     },
     {
+      // FDI #18 = upper right wisdom tooth → FAR IMAGE LEFT (patient right), angled/impacted
+      // The generated image shows an angled tooth mass on the left side around x: 0.08-0.18
       id: 'det_3_3',
       tooth_id: '18',
       condition: 'Impacted Tooth',
       severity: 4,
       confidence: 0.95,
       triage: 'RED',
-      bbox: { x: 0.08, y: 0.32, width: 0.09, height: 0.1 },
+      bbox: { x: 0.075, y: 0.40, width: 0.095, height: 0.115 },
       explanation: 'Third molar (#18) is horizontally impacted, with the crown partially overlapping the distal root of #17.',
       patient_explanation: 'Your upper-right wisdom tooth is stuck horizontally inside the jaw and cannot erupt normally. Surgical removal is advised.',
       dentist_notes: 'Mesio-angular impaction Class IIA. Risk of pericoronitis and caries on distal #17. OMS referral recommended.',
@@ -91,13 +99,14 @@ export const DEMO_SCAN: ScanResult = {
       clinical_name: 'Horizontally Impacted Wisdom Tooth',
     },
     {
+      // FDI #25 = upper left 2nd premolar → IMAGE RIGHT (patient left), upper jaw ~60-66%
       id: 'det_4_4',
       tooth_id: '25',
       condition: 'Root Canal Treatment',
       severity: 3,
       confidence: 0.89,
       triage: 'YELLOW',
-      bbox: { x: 0.54, y: 0.72, width: 0.05, height: 0.11 },
+      bbox: { x: 0.610, y: 0.385, width: 0.055, height: 0.115 },
       explanation: 'Radiopaque material consistent with root canal obturation visible in tooth #25. Appears adequately filled.',
       patient_explanation: 'Tooth #25 has had a root canal in the past. It looks acceptable but should be monitored.',
       dentist_notes: 'Acceptable RCT, no periapical pathology. Crown recommended to prevent fracture.',
@@ -109,13 +118,14 @@ export const DEMO_SCAN: ScanResult = {
       clinical_name: 'Root Canal Obturation',
     },
     {
+      // FDI #21 = upper left central incisor → just right of center in IMAGE (x ≈ 0.50-0.55)
       id: 'det_5_5',
       tooth_id: '21',
       condition: 'Filling',
       severity: 1,
       confidence: 0.97,
       triage: 'GREEN',
-      bbox: { x: 0.44, y: 0.18, width: 0.04, height: 0.05 },
+      bbox: { x: 0.498, y: 0.385, width: 0.048, height: 0.095 },
       explanation: 'Composite resin filling detected on tooth #21. Margins appear intact.',
       patient_explanation: 'Tooth #21 has an existing filling that looks fine.',
       dentist_notes: 'Composite restoration with intact margins. No replacement needed at this time.',
@@ -127,13 +137,14 @@ export const DEMO_SCAN: ScanResult = {
       clinical_name: 'Composite Restoration',
     },
     {
+      // FDI #46 = lower right 1st molar → IMAGE LEFT (patient right), lower jaw ~28-36%
       id: 'det_6_6',
       tooth_id: '46',
       condition: 'Crown',
       severity: 1,
       confidence: 0.93,
       triage: 'GREEN',
-      bbox: { x: 0.32, y: 0.65, width: 0.06, height: 0.07 },
+      bbox: { x: 0.282, y: 0.575, width: 0.068, height: 0.10 },
       explanation: 'Existing full crown on tooth #46. No marginal gaps or periapical pathology noted.',
       patient_explanation: 'Tooth #46 has a dental crown that appears to be in good condition.',
       dentist_notes: 'Well-adapted crown. No recurrent decay or marginal discrepancy detected.',
