@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LayoutDashboard, ArrowLeft, Upload, User2 } from 'lucide-react';
+import { LayoutDashboard, ArrowLeft, User2, Zap } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import api from '../services/api';
 import XrayViewer from '../components/viewer/XrayViewer';
@@ -10,12 +10,16 @@ export default function Viewer() {
   const navigate = useNavigate();
   const { scanResult, setScanResult, uploadedImageUrl } = useApp();
   const fetchedRef = useRef(false);
+  const isDemo = scanResult?.scan_id?.startsWith('demo-') ?? false;
 
   useEffect(() => {
     if (!scanResult) {
       navigate('/');
       return;
     }
+
+    // Skip second-opinion call for demo scans
+    if (isDemo) return;
 
     if (!fetchedRef.current && scanResult.findings.some(f => f.second_opinion === 'pending')) {
       fetchedRef.current = true;
@@ -34,7 +38,7 @@ export default function Viewer() {
         console.error("Second opinion fetch failed:", err);
       });
     }
-  }, [scanResult, navigate, setScanResult]);
+  }, [scanResult, navigate, setScanResult, isDemo]);
 
   if (!scanResult) return null;
 
@@ -45,10 +49,18 @@ export default function Viewer() {
         <div className="flex items-center gap-3">
           <button onClick={() => navigate('/')} className="btn-secondary !py-1.5 !px-3 text-xs gap-1.5">
             <ArrowLeft className="w-3.5 h-3.5" />
-            Re-upload
+            {isDemo ? 'Back' : 'Re-upload'}
           </button>
           <div>
-            <h1 className="text-sm font-bold text-white">X-ray Analysis Viewer</h1>
+            <div className="flex items-center gap-2">
+              <h1 className="text-sm font-bold text-white">X-ray Analysis Viewer</h1>
+              {isDemo && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/15 border border-amber-500/40 text-amber-300">
+                  <Zap className="w-2.5 h-2.5" />
+                  Demo
+                </span>
+              )}
+            </div>
             <p className="text-[11px] text-gray-500">
               {scanResult.findings.length} findings detected · {scanResult.scan_date ? new Date(scanResult.scan_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : ''}
             </p>

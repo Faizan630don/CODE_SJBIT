@@ -1,11 +1,12 @@
 import { useState, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Upload as UploadIcon, Brain, Sparkles, CheckCircle, FileImage, X } from 'lucide-react';
+import { Upload as UploadIcon, Brain, Sparkles, CheckCircle, FileImage, X, Zap } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { uploadXray, getScanResults, saveScanToHistory } from '../services/api';
 import { validateAnalysisResult } from '../utils/dataValidator';
 import { supabase } from '../services/supabase';
 import Hero3D from '../components/layout/Hero3D';
+import { DEMO_SCAN } from '../data/demoScan';
 
 type UploadState = 'idle' | 'dragging' | 'uploading' | 'analyzing' | 'done';
 
@@ -114,6 +115,33 @@ export default function Upload() {
       setError('Analysis failed. Please try again.');
       setState('idle');
     }
+  };
+
+  // ── Live Demo ──────────────────────────────────────────────────────────────
+  const runDemo = () => {
+    setState('uploading');
+    setProgress(0);
+    setCurrentStep(0);
+
+    // Animate the same loading steps so users see the full UX
+    ANALYSIS_STEPS.forEach((step, i) => {
+      setTimeout(() => {
+        setCurrentStep(i);
+        setProgress(Math.round(((i + 1) / ANALYSIS_STEPS.length) * 100));
+        if (i === 1) setState('analyzing');
+      }, step.delay);
+    });
+
+    // After steps finish, inject demo data and navigate
+    const totalDuration = ANALYSIS_STEPS[ANALYSIS_STEPS.length - 1].delay + 900;
+    setTimeout(() => {
+      setProgress(100);
+      setState('done');
+      setScanResult(DEMO_SCAN);
+      setUploadedFile(null);
+      setUploadedImageUrl('/demo-xray.jpg');
+      setTimeout(() => navigate('/viewer'), 400);
+    }, totalDuration);
   };
 
   const isLoading = state === 'uploading' || state === 'analyzing';
@@ -260,8 +288,10 @@ export default function Upload() {
 
         {/* CTA */}
         {!isLoading && state !== 'done' && (
-          <div className="mt-5 flex flex-col items-center gap-3">
+          <div className="mt-5 flex flex-col items-center gap-4">
+            {/* Primary: Analyze */}
             <button
+              id="analyze-btn"
               onClick={startAnalysis}
               disabled={!file}
               className="btn-primary w-full max-w-xs justify-center py-3 text-base"
@@ -269,8 +299,38 @@ export default function Upload() {
               <Brain className="w-5 h-5" />
               Analyze X-ray with AI
             </button>
+
+            {/* Divider */}
+            <div className="flex items-center gap-3 w-full max-w-xs">
+              <div className="flex-1 h-px bg-surface-border" />
+              <span className="text-[11px] text-gray-600 font-semibold tracking-wider uppercase">or</span>
+              <div className="flex-1 h-px bg-surface-border" />
+            </div>
+
+            {/* Live Demo button */}
+            <button
+              id="live-demo-btn"
+              onClick={runDemo}
+              className="
+                group relative w-full max-w-xs flex items-center justify-center gap-2.5
+                py-3 px-5 rounded-xl text-sm font-semibold
+                border border-amber-500/40 bg-amber-500/5
+                text-amber-300 hover:text-amber-200
+                hover:border-amber-400/70 hover:bg-amber-500/10
+                transition-all duration-200
+                focus:outline-none focus:ring-2 focus:ring-amber-500/50
+              "
+            >
+              {/* subtle glow pulse */}
+              <span className="absolute inset-0 rounded-xl bg-amber-400/0 group-hover:bg-amber-400/5 transition-colors duration-300" />
+              <Zap className="w-4 h-4 shrink-0 group-hover:animate-bounce" />
+              Try Live Demo — No X-ray needed
+            </button>
+
             <p className="text-xs text-gray-600 text-center max-w-sm">
-              Your X-ray is processed securely. No data is stored permanently.
+              {file
+                ? 'Your X-ray is processed securely. No data is stored permanently.'
+                : 'Upload an X-ray above, or try the live demo to explore all features instantly.'}
             </p>
           </div>
         )}

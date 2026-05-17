@@ -14,7 +14,6 @@ from datetime import datetime
 from typing import List, Optional, Dict, Any
 from pydantic import BaseModel
 from supabase import create_client, Client
-
 from config import settings
 from llm_service import generate_report, compare_reports
 from model_service import cnn_service
